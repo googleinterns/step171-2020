@@ -3,7 +3,7 @@
 *  a particular project, including the members and tasks within it.
 */
 
-package com.rtb.projectmanagementtool.task;
+package com.rtb.projectmanagementtool.project;
 
 import java.util.HashSet;
 
