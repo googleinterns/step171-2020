@@ -1,6 +1,6 @@
 /**
-*  ProjectController.java - this file implements ProjectController, which
-   controls the logic of working with Project objects.
+* ProjectController.java - this file implements ProjectController, which controls the logic of
+* working with Project objects.
 */
 
 package com.rtb.projectmanagementtool.project;
