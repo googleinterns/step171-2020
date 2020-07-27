@@ -3,9 +3,9 @@ package com.rtb.projectmanagementtool.task;
 import com.google.appengine.api.datastore.DatastoreService;
 import com.google.appengine.api.datastore.DatastoreServiceFactory;
 import com.google.appengine.api.datastore.Entity;
+import com.google.appengine.api.datastore.Key;
 import com.google.appengine.api.datastore.PreparedQuery;
 import com.google.appengine.api.datastore.Query;
-import com.google.appengine.api.datastore.Key;
 import java.util.HashSet;
 
 /** Class controlling the TaskData object. */
@@ -76,5 +76,4 @@ public final class TaskController {
     }
     datastore.delete(keys);
   }
-
 }
