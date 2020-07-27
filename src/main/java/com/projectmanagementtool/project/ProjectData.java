@@ -78,8 +78,8 @@ public class ProjectData {
         Type mapType = new TypeToken<HashMap<Long, User>>(){}.getType();
         Type setType = new TypeToken<HashSet<Long>>(){}.getType();
 
-        this.userIds =          gson.fromJson((String) entity.getProperty(PROPERTY_USER_IDS), mapType);
-        this.taskIds =          gson.fromJson((String) entity.getProperty(PROPERTY_TASK_IDS), setType);
+        this.userIds = gson.fromJson((String) entity.getProperty(PROPERTY_USER_IDS), mapType);
+        this.taskIds = gson.fromJson((String) entity.getProperty(PROPERTY_TASK_IDS), setType);
     }
 
     /**
@@ -129,20 +129,6 @@ public class ProjectData {
     public HashMap<Long, User> getUsers() {
         return this.userIds;
     }
-
-    /**
-    * @return admin ids
-    */
-    //public HashSet<Long> getAdminIds() {
-    //    return this.adminUserIds;
-    //}
-
-    /**
-    * @return regular user ids
-    */
-    //public HashSet<Long> getRegularIds() {
-    //    return this.regularUserIds;
-    //}
 
     /**
     * @return task ids
