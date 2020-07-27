@@ -1,3 +1,7 @@
+function projectTest() {
+    console.log("fetching project test...");
+    fetch('myproject-test');
+}
 /**
  * Redirect to User Profile Page.
  */
