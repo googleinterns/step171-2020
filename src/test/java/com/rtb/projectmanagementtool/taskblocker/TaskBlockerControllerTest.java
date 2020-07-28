@@ -34,15 +34,15 @@ public class TaskBlockerControllerTest {
 
     // Add 2 initially
     ctl.addTaskBlocker(ds, /*taskID=*/ 1l, /*blockerID=*/ 2l);
-    ctl.addTaskBlocker(ds, /*taskID=*/ 2l, /*blockerID=*/ 3l);
+    ctl.addTaskBlocker(ds, /*taskID=*/ 1l, /*blockerID=*/ 3l);
 
     // Should have 2 now
     HashSet<TaskBlockerData> blockers = ctl.getTaskBlockers(ds, /*taskID=*/ 1l);
     Assert.assertEquals(blockers.size(), 2);
 
     // Add 2 more
-    ctl.addTaskBlocker(ds, /*taskID=*/ 1l, /*blockerID=*/ 2l);
-    ctl.addTaskBlocker(ds, /*taskID=*/ 2l, /*blockerID=*/ 3l);
+    ctl.addTaskBlocker(ds, /*taskID=*/ 1l, /*blockerID=*/ 3l);
+    ctl.addTaskBlocker(ds, /*taskID=*/ 1l, /*blockerID=*/ 4l);
 
     // Should be 4 now
     blockers = ctl.getTaskBlockers(ds, /*taskID=*/ 1l);

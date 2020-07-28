@@ -16,7 +16,9 @@ public final class TaskBlockerController {
     HashSet<TaskBlockerData> blockers = new HashSet<>();
     for (Entity entity : results.asIterable()) {
       TaskBlockerData blocker = new TaskBlockerData(entity);
-      blockers.add(blocker);
+      if (blocker.getTaskID() == taskID) {
+        blockers.add(blocker);
+      }
     }
     return blockers;
   }
