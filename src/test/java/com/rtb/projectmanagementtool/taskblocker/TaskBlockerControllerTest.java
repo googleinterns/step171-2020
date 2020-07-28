@@ -65,16 +65,10 @@ public class TaskBlockerControllerTest {
 
     HashSet<TaskBlockerData> blockers = ctl.getTaskBlockers(ds, /*taskID=*/ 1l);
     Assert.assertFalse(blockers.isEmpty());
-
-    /*
-    // These two asserts will fail because getTaskBlockers filter by
-    // taskID has not been implemented yet
-
-    Assert.assertEquals(blockers.size(), 3);
+    Assert.assertEquals(blockers.size(), 2);
 
     for (TaskBlockerData blocker : blockers) {
         Assert.assertEquals(blocker.getTaskID(), 1l);
     }
-    */
   }
 }
