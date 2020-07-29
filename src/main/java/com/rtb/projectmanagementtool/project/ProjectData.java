@@ -10,12 +10,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 
-enum User {
-  CREATOR, // has admin capabilities and more, like deleting the project and add & remove admins
-  ADMIN, // can add users to the project/perform other administrative tasks
-  REGULAR;
-}
-
 public class ProjectData {
   private final String PROPERTY_NAME = "name";
   private final String PROPERTY_DESCRIPTION = "description";
@@ -25,7 +19,7 @@ public class ProjectData {
   private long id;
   private String name;
   private String description;
-  private HashMap<Long, User> userIds;
+  private HashMap<Long, UserEnum> userIds;
   private HashSet<Long> taskIds;
 
   /**
@@ -40,8 +34,8 @@ public class ProjectData {
     this.description = description;
     this.taskIds = new HashSet<Long>();
 
-    this.userIds = new HashMap<Long, User>();
-    this.userIds.put(creatorId, User.CREATOR);
+    this.userIds = new HashMap<Long, UserEnum>();
+    this.userIds.put(creatorId, UserEnum.CREATOR);
   }
 
   /**
@@ -61,12 +55,12 @@ public class ProjectData {
       this.taskIds = new HashSet<Long>();
     }
 
-    this.userIds = new HashMap<Long, User>();
+    this.userIds = new HashMap<Long, UserEnum>();
     // can store map in datastore entities using EmbeddedEntity
     EmbeddedEntity ee = (EmbeddedEntity) entity.getProperty(PROPERTY_USER_IDS);
     if (ee != null) {
       for (String key : ee.getProperties().keySet()) {
-        this.userIds.put(Long.parseLong(key), User.valueOf((String) ee.getProperty(key)));
+        this.userIds.put(Long.parseLong(key), UserEnum.valueOf((String) ee.getProperty(key)));
       }
     }
   }
@@ -103,7 +97,7 @@ public class ProjectData {
   }
 
   /** @return returns user ids */
-  public HashMap<Long, User> getUsers() {
+  public HashMap<Long, UserEnum> getUsers() {
     return this.userIds;
   }
 
@@ -149,7 +143,7 @@ public class ProjectData {
     if (this.userIds.keySet().contains(userId)) {
       removeUser(userId);
     }
-    this.userIds.put(userId, User.ADMIN);
+    this.userIds.put(userId, UserEnum.ADMIN);
   }
 
   /**
@@ -162,7 +156,7 @@ public class ProjectData {
     if (this.userIds.keySet().contains(userId)) {
       removeUser(userId);
     }
-    this.userIds.put(userId, User.REGULAR);
+    this.userIds.put(userId, UserEnum.REGULAR);
   }
 
   /**
