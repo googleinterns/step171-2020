@@ -4,8 +4,10 @@
  */
 package com.rtb.projectmanagementtool.project;
 
-import com.google.appengine.api.datastore.EmbeddedEntity;
 import com.google.appengine.api.datastore.Entity;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -61,14 +63,17 @@ public class ProjectData {
       this.taskIds = new HashSet<Long>();
     }
 
-    this.userIds = new HashMap<Long, User>();
+    Gson gson = new Gson();
+    Type mapType = new TypeToken<HashMap<Long, User>>() {}.getType();
+    this.userIds = gson.fromJson((String) entity.getProperty(PROPERTY_USER_IDS), mapType);
+    // this.userIds = new HashMap<Long, User>();
     // can store map in datastore entities using EmbeddedEntity
-    EmbeddedEntity ee = (EmbeddedEntity) entity.getProperty(PROPERTY_USER_IDS);
-    if (ee != null) {
-      for (String key : ee.getProperties().keySet()) {
-        this.userIds.put(Long.parseLong(key), User.valueOf((String) ee.getProperty(key)));
-      }
-    }
+    // EmbeddedEntity ee = (EmbeddedEntity) entity.getProperty(PROPERTY_USER_IDS);
+    // if (ee != null) {
+    //  for (String key : ee.getProperties().keySet()) {
+    //    this.userIds.put(Long.parseLong(key), User.valueOf((String) ee.getProperty(key)));
+    //  }
+    // }
   }
 
   /** @return the entity representation of this class */
@@ -77,13 +82,8 @@ public class ProjectData {
     entity.setProperty(PROPERTY_NAME, this.name);
     entity.setProperty(PROPERTY_DESCRIPTION, this.description);
     entity.setProperty(PROPERTY_TASK_IDS, this.taskIds);
-
-    EmbeddedEntity userIdsEntity = new EmbeddedEntity();
-    for (Long key : this.userIds.keySet()) {
-      userIdsEntity.setProperty(key.toString(), this.userIds.get(key).name());
-    }
-    entity.setProperty(PROPERTY_USER_IDS, userIdsEntity);
-
+    Gson gson = new Gson();
+    entity.setProperty(PROPERTY_USER_IDS, gson.toJson(this.userIds));
     return entity;
   }
 
