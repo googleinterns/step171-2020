@@ -97,11 +97,12 @@ public class ProjectData {
     return this.description;
   }
 
-  /**
-   * @return returns uUserProjectRole> public HashMap<Long, UserProjectRole> getUsers() { return
-   *     this.userIds; }
-   *     <p>/** @return task ids
-   */
+  /** @return user ids */
+  public HashMap<Long, UserProjectRole> getUserIds() {
+    return this.userIds;
+  }
+
+  /** @return task ids */
   public HashSet<Long> getTaskIds() {
     return this.taskIds;
   }
