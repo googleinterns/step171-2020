@@ -5,15 +5,16 @@
 package com.rtb.projectmanagementtool.project;
 
 import com.google.appengine.api.datastore.DatastoreService;
-import com.google.appengine.api.datastore.EmbeddedEntity;
 import com.google.appengine.api.datastore.Entity;
 import com.google.appengine.api.datastore.Key;
 import com.google.appengine.api.datastore.KeyFactory;
 import com.google.appengine.api.datastore.PreparedQuery;
 import com.google.appengine.api.datastore.Query;
-import java.util.ArrayList;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.HashSet;
 
 public class ProjectController {
@@ -59,17 +60,15 @@ public class ProjectController {
       return true;
     }
 
-    ArrayList<Long> entityUserIds = new ArrayList<Long>();
-    EmbeddedEntity ee = (EmbeddedEntity) entity.getProperty(PROPERTY_USER_IDS);
-    if (ee != null) {
-      for (String key : ee.getProperties().keySet()) {
-        entityUserIds.add(Long.parseLong(key));
-      }
-    }
+    HashMap entityUserIds =
+        new Gson()
+            .fromJson(
+                (String) entity.getProperty(PROPERTY_USER_IDS),
+                new TypeToken<HashMap<Long, UserProjectRole>>() {}.getType());
 
     // Collections.disjoint() returns true if the two specified
     // collections have no elements in common.
-    return !Collections.disjoint(entityUserIds, userIds);
+    return !Collections.disjoint(entityUserIds.keySet(), userIds);
   }
 
   /**

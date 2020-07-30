@@ -60,15 +60,6 @@ public class ProjectData {
     Gson gson = new Gson();
     Type mapType = new TypeToken<HashMap<Long, UserProjectRole>>() {}.getType();
     this.userIds = gson.fromJson((String) entity.getProperty(PROPERTY_USER_IDS), mapType);
-    // this.userIds = new HashMap<Long, UserProjectRole>();
-    // can store map in datastore entities using EmbeddedEntity
-    // EmbeddedEntity ee = (EmbeddedEntity) entity.getProperty(PROPERTY_USER_IDS);
-    // if (ee != null) {
-    //  for (String key : ee.getProperties().keySet()) {
-    //    this.userIds.put(Long.parseLong(key), UserProjectRole.valueOf((String)
-    // ee.getProperty(key)));
-    //  }
-    // }
   }
 
   /** @return the entity representation of this class */
