@@ -63,7 +63,7 @@ public class ProjectControllerTest {
     HashSet<ProjectData> projects = projectController.getProjects(Collections.emptyList());
     int projectsSize = projects.size();
     Assert.assertTrue(projectsSize == 2);
-    
+
     for (ProjectData project : projects) {
       projectController.removeProject(project);
       Assert.assertTrue(
