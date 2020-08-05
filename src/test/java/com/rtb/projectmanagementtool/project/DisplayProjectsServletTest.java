@@ -26,7 +26,8 @@ public class DisplayProjectsServletTest extends Mockito {
   private final LocalServiceTestHelper helper =
       new LocalServiceTestHelper(
           new LocalDatastoreServiceTestConfig()
-              .setAutoIdAllocationPolicy(LocalDatastoreService.AutoIdAllocationPolicy.SEQUENTIAL));
+
+.setAutoIdAllocationPolicy(LocalDatastoreService.AutoIdAllocationPolicy.SEQUENTIAL));
 
   @Before
   public void setUp() {
@@ -98,7 +99,8 @@ public class DisplayProjectsServletTest extends Mockito {
     // Call doPost
     servlet.doPost(request, response);
 
-    ArrayList<String> expectedOutput = new ArrayList<String>(Arrays.asList(newProject.getName()));
+    ArrayList<String> expectedOutput = new
+ArrayList<String>(Arrays.asList(newProject.getName()));
     String actualOutput = stringWriter.getBuffer().toString().trim();
 
     // Converting expectedOutput to gson because servlet returns stringWriter as json

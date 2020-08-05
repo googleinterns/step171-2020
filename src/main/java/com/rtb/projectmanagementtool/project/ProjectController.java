@@ -30,9 +30,6 @@ public class ProjectController {
    */
   public ArrayList<ProjectData> getProjectsWithUser(Long userId) {
     ArrayList<String> queryList = new ArrayList<String>();
-    queryList.add(ProjectData.createUserString(userId, UserProjectRole.CREATOR));
-    queryList.add(ProjectData.createUserString(userId, UserProjectRole.ADMIN));
-    queryList.add(ProjectData.createUserString(userId, UserProjectRole.MEMBER));
     return getProjectsByQuery(queryList);
   }
 
@@ -44,7 +41,6 @@ public class ProjectController {
    */
   public ArrayList<ProjectData> getProjectsWithAdmin(Long userId) {
     ArrayList<String> queryList = new ArrayList<String>();
-    queryList.add(ProjectData.createUserString(userId, UserProjectRole.ADMIN));
     return getProjectsByQuery(queryList);
   }
 
@@ -56,7 +52,6 @@ public class ProjectController {
    */
   public ArrayList<ProjectData> getProjectsByCreator(Long userId) {
     ArrayList<String> queryList = new ArrayList<String>();
-    queryList.add(ProjectData.createUserString(userId, UserProjectRole.CREATOR));
     return getProjectsByQuery(queryList);
   }
 
