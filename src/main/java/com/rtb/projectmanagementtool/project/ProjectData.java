@@ -266,4 +266,17 @@ public class ProjectData {
     returnString += "Tasks: " + this.tasks.toString() + "\n}";
     return returnString;
   }
+
+  public static boolean equals(ProjectData a, ProjectData b) {
+    return a.getId() == b.getId()
+        && a.getCreatorId() == b.getCreatorId()
+        && a.getDescription().equals(b.getDescription())
+        && a.getTasks().equals(b.getTasks())
+        && a.getUsers().equals(b.getUsers());
+  }
+
+  @Override
+  public boolean equals(Object other) {
+    return other instanceof ProjectData && equals(this, (ProjectData) other);
+  }
 }

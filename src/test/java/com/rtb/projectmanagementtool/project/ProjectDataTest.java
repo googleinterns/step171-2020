@@ -91,9 +91,23 @@ public class ProjectDataTest {
     // Create project
     ProjectData project = new ProjectData(entity);
 
-    // Have to use toString() because while entities have the same variables, they don't have the
-    // same references
-    Assert.assertEquals("project matches entity", entity.toString(), project.toEntity().toString());
+    Assert.assertEquals(
+        "project names match", entity.getProperty(PROPERTY_NAME), project.getName());
+    Assert.assertEquals(
+        "project description match",
+        entity.getProperty(PROPERTY_DESCRIPTION),
+        project.getDescription());
+    Assert.assertEquals(
+        "project creators match", entity.getProperty(PROPERTY_CREATOR), project.getCreatorId());
+    Assert.assertEquals(
+        "project tasks match", entity.getProperty(PROPERTY_TASKS), project.getTasks());
+
+    HashSet<Long> projectAdmins = project.getUsers().get(UserProjectRole.ADMIN);
+    HashSet<Long> projectMembers = project.getUsers().get(UserProjectRole.MEMBER);
+
+    Assert.assertEquals("project tasks match", entity.getProperty(PROPERTY_ADMINS), projectAdmins);
+    Assert.assertEquals(
+        "project tasks match", entity.getProperty(PROPERTY_MEMBERS), projectMembers);
   }
 
   @Test
@@ -101,7 +115,7 @@ public class ProjectDataTest {
     // Create project and call toEntity()
     ProjectData project = new ProjectData(PROJECT1_NAME, PROJECT1_DESC, USER2);
     Entity entity = project.toEntity();
-
+    
     Assert.assertEquals(
         "name is correct in entity", PROJECT1_NAME, (String) entity.getProperty(PROPERTY_NAME));
     Assert.assertEquals(

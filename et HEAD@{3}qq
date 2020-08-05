@@ -1,0 +1,2182 @@
+[33mcommit 39068cd3c063fe2ca132f36fce588cee8811d148[m[33m ([m[1;36mHEAD -> [m[1;32mgodsfavour-dev2[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m
+Merge: e4cff88 915c55b
+Author: Tzirliya <46089063+Tzirliya@users.noreply.github.com>
+Date:   Wed Aug 5 10:33:45 2020 -0400
+
+    Merge pull request #47 from googleinterns/TZIRLIYA_DEVELOPMENT
+    
+    Update Task Classes and Add 'add_task.html' Page
+
+[33mcommit 915c55b170648b36d3d022d6fb6cc557b57b2e3a[m[33m ([m[1;31morigin/TZIRLIYA_DEVELOPMENT[m[33m)[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Tue Aug 4 21:49:38 2020 +0000
+
+    Fix code format.
+
+[33mcommit ef12b77876c9cbd797cb581fdbdd518563ba84a8[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Tue Aug 4 21:45:33 2020 +0000
+
+    Fix code format.
+
+[33mcommit 7c002c3d9b49e3427e413967e508fa1deb2025c3[m
+Merge: 8d49336 e4cff88
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Tue Aug 4 21:30:14 2020 +0000
+
+    Merge branch 'master' of https://github.com/googleinterns/step171-2020 into TZIRLIYA_DEVELOPMENT
+
+[33mcommit 8d49336c826f39b99eae1e0155002cb14b66f8ef[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Tue Aug 4 21:27:03 2020 +0000
+
+    Redirect to new Task Page after adding a new task.
+
+[33mcommit b02cc6d05eeb18868481715960fe2d6928be3b4c[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Tue Aug 4 21:16:50 2020 +0000
+
+    Clean up code.
+
+[33mcommit 05c6a6f43966e328d4107f746a7bae6bc17d34c4[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Tue Aug 4 20:54:40 2020 +0000
+
+    Fix bugs with taskIDs. Add subtask methods to TaskController.
+
+[33mcommit e4cff88f103eec6e6e5966ef2093f40994e0ea00[m
+Merge: 54c27cb 0308431
+Author: godsfavours <67076777+godsfavours@users.noreply.github.com>
+Date:   Tue Aug 4 14:30:37 2020 -0500
+
+    Merge pull request #45 from googleinterns/godsfavour_dev
+    
+    Project Servlets and Tests
+
+[33mcommit 54c27cb4da442e2ee013f0876058df694637b796[m
+Merge: ba4ae1b fc77376
+Author: talgsternberg <67270314+talgsternberg@users.noreply.github.com>
+Date:   Tue Aug 4 15:24:23 2020 -0400
+
+    Merge pull request #44 from googleinterns/TALSBRANCH
+    
+    UserServer Test and Implement Enums
+
+[33mcommit fc77376d4644cc1a610a00ad1b8a637dee2228d5[m
+Author: Tal <talsternberg@google.com>
+Date:   Tue Aug 4 17:14:03 2020 +0000
+
+    working UserServletTest. All test class tests pass.
+
+[33mcommit 9cc4554619f1b6205cd8bb8630233cfb13571880[m
+Merge: 6aac409 ba4ae1b
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Tue Aug 4 15:54:30 2020 +0000
+
+    Merge branch 'master' of https://github.com/googleinterns/step171-2020 into TZIRLIYA_DEVELOPMENT
+
+[33mcommit 6aac409f16d62652fb5d438bf21aeef9317f1397[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Tue Aug 4 15:54:18 2020 +0000
+
+    Add page to create new tasks/subtasks.
+
+[33mcommit 003a5e0044621e0d84391df80a41b9639e89e061[m
+Author: Tal <talsternberg@google.com>
+Date:   Tue Aug 4 15:41:10 2020 +0000
+
+    change to get Values of parameter in line 74 of UserServletTes
+
+[33mcommit c7448a436e7680dd03b1c9b796b3b49c99481a6c[m
+Author: Tal <talsternberg@google.com>
+Date:   Tue Aug 4 15:16:07 2020 +0000
+
+    null pointer in line 62 of UserServlet.java
+
+[33mcommit 45e82184b27a51d31733ab560c23bf2d3cf9e9f0[m
+Author: Tal <talsternberg@google.com>
+Date:   Tue Aug 4 14:30:37 2020 +0000
+
+    fix doGet test. doPost still erroring
+
+[33mcommit 0308431f588f52ba96ae9ff7f6e594a68d86aa32[m
+Author: Godsfavour <godsfavour@google.com>
+Date:   Tue Aug 4 13:03:01 2020 +0000
+
+    Some Project Servlets and tests
+
+[33mcommit f8ff873b47fed59a5cc27b0da0a168ee813fc060[m
+Author: Godsfavour <godsfavour@google.com>
+Date:   Tue Aug 4 08:53:19 2020 +0000
+
+    Implement PR suggestions
+
+[33mcommit 74dde99147c021fd9b03c4a5ed0ad35431fdc966[m
+Merge: 255ed6f ba4ae1b
+Author: Tal <talsternberg@google.com>
+Date:   Mon Aug 3 20:35:35 2020 +0000
+
+    Merge branch 'master' of https://github.com/googleinterns/step171-2020 into TALSBRANCH
+
+[33mcommit 255ed6f0cc07b1c45df6f2f16fdebfa7e1e84b15[m
+Author: Tal <talsternberg@google.com>
+Date:   Mon Aug 3 20:33:55 2020 +0000
+
+    implement basic server test (based on Tzirliya's model). Errors.
+
+[33mcommit afd85e0d6b21ddc199ac7ef04bf0d2dc747623a1[m
+Author: Tal <talsternberg@google.com>
+Date:   Mon Aug 3 19:27:35 2020 +0000
+
+    re-implement Skills enum into classes, server, and tests
+
+[33mcommit ba4ae1b68b06f228cf500b9bdd99e345f075c79c[m
+Merge: fde2b13 eeef4da
+Author: talgsternberg <67270314+talgsternberg@users.noreply.github.com>
+Date:   Mon Aug 3 14:28:45 2020 -0400
+
+    Merge pull request #41 from googleinterns/TALSBRANCH
+    
+    UserServlet
+
+[33mcommit eeef4da22f3e2e74c9d0157e131d38f5ef5c5bd4[m
+Author: Tal <talsternberg@google.com>
+Date:   Mon Aug 3 18:16:20 2020 +0000
+
+    fix suggestions on PR
+
+[33mcommit bd637fe2248d76798a6c79ba9a3eade4c75d1967[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Mon Aug 3 17:58:24 2020 +0000
+
+    Update TaskServlet and unit tests.
+
+[33mcommit 781cbc095738a89dc13f6dfb1327382926018279[m
+Author: Tal <talsternberg@google.com>
+Date:   Mon Aug 3 17:53:02 2020 +0000
+
+    lint on main.js
+
+[33mcommit eb7893fb24c6f9c8321e1e53fcd44fc3d381fd2b[m
+Merge: f8c2e37 fde2b13
+Author: Tal <talsternberg@google.com>
+Date:   Mon Aug 3 17:49:27 2020 +0000
+
+    resolve conflicts
+
+[33mcommit f8c2e37fb751753b6325301240a2a9e217a4a6eb[m
+Author: Tal <talsternberg@google.com>
+Date:   Mon Aug 3 17:14:06 2020 +0000
+
+    pass tests
+
+[33mcommit fde2b13469e1b872dc660a8f091e762b0c0fe226[m
+Merge: 7d77ebf 9b0e8ca
+Author: godsfavours <67076777+godsfavours@users.noreply.github.com>
+Date:   Mon Aug 3 11:45:06 2020 -0500
+
+    Merge pull request #43 from googleinterns/godsfavour_dev
+    
+    Update Project classes
+
+[33mcommit 9165381d88d716a86e4eae6acdbef6b815143d53[m
+Author: Tal <talsternberg@google.com>
+Date:   Mon Aug 3 16:08:12 2020 +0000
+
+    modifying classes to fix UserControllerTest. Still issues.
+
+[33mcommit 7d77ebf04dd595a4ce1fcd3ca212f5f7d11c5a3f[m
+Merge: b27bc97 98b7681
+Author: Tzirliya <46089063+Tzirliya@users.noreply.github.com>
+Date:   Mon Aug 3 11:42:14 2020 -0400
+
+    Merge pull request #40 from googleinterns/TZIRLIYA_DEVELOPMENT
+    
+    Add Task Servlet
+
+[33mcommit 3c4ae6f65ba718d66d23dd03b17100b86a8d1296[m
+Author: Tal <talsternberg@google.com>
+Date:   Mon Aug 3 14:23:02 2020 +0000
+
+    new prints. delete old ones
+
+[33mcommit 98b7681efec2a80510e0345f1465c9987ca2c3d3[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Sun Aug 2 17:16:53 2020 +0000
+
+    Create JavaScript file structure.
+
+[33mcommit 9b0e8ca1ec194b4fbfd6aab844a2ebc3ad3d4694[m
+Author: Godsfavour <godsfavour@google.com>
+Date:   Sat Aug 1 00:10:38 2020 +0000
+
+    fix comments
+
+[33mcommit ca330de255576f3e8f7ba84ca45468fdbffeb099[m
+Author: Godsfavour <godsfavour@google.com>
+Date:   Sat Aug 1 00:06:04 2020 +0000
+
+    remove print statement
+
+[33mcommit 3c2308587c187c8b094d22b4ad3b30fa67b9ca33[m
+Author: Godsfavour <godsfavour@google.com>
+Date:   Sat Aug 1 00:05:10 2020 +0000
+
+    Update ProjectControllerTest
+
+[33mcommit 35ded4d2dacc38c5f6ae41653966facf747ed00c[m
+Author: Godsfavour <godsfavour@google.com>
+Date:   Sat Aug 1 00:04:42 2020 +0000
+
+    Update ProjectController class
+
+[33mcommit 85a07667c61fda38fb00ce4e6fea03437a428e4d[m
+Author: Godsfavour <godsfavour@google.com>
+Date:   Sat Aug 1 00:04:16 2020 +0000
+
+    Update ProjectDataTest
+
+[33mcommit e145001e825837d1c954cede1f3e782d652c13da[m
+Author: Godsfavour <godsfavour@google.com>
+Date:   Sat Aug 1 00:03:16 2020 +0000
+
+    Update ProjectData class
+
+[33mcommit 05bffee5533e6feb18dbfeb8aa892b856652b23c[m
+Author: Godsfavour <godsfavour@google.com>
+Date:   Sat Aug 1 00:02:39 2020 +0000
+
+    UserProjectRole enum
+
+[33mcommit 6409f58dccd10cb78ab1f1417c343587c571ca06[m
+Author: Godsfavour <godsfavour@google.com>
+Date:   Fri Jul 31 23:58:05 2020 +0000
+
+    clear files
+
+[33mcommit a785da66ade067cb5724c01770bb37045476d917[m
+Author: Tal <talsternberg@google.com>
+Date:   Fri Jul 31 16:59:00 2020 +0000
+
+    print statements
+
+[33mcommit a39312ef3d0106cfba2fe4d1531d9f7d256eacf2[m
+Author: Tal <talsternberg@google.com>
+Date:   Fri Jul 31 15:27:04 2020 +0000
+
+    lint'
+
+[33mcommit 5fff8d529da1842d6269edbc81fa411d0ad1dcaf[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Fri Jul 31 15:17:17 2020 +0000
+
+    Succeed in splitting up JavaScript files into two modules and importing/exporting between them.
+
+[33mcommit 336bd841293bd891f5c41dac445a6bd25f938ed0[m
+Author: Tal <talsternberg@google.com>
+Date:   Fri Jul 31 15:16:51 2020 +0000
+
+    modify server, fix lint, add getUserById test to UserControllerTest -- null pointer error
+
+[33mcommit 555d2e0eb3a867e6b2689ee459812946437c55e8[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Fri Jul 31 14:15:25 2020 +0000
+
+    Attempt to split up JavaScript files and import shared functions.
+
+[33mcommit 0fbc742207d7cd78a98daeeed38612584dd85867[m
+Author: Tal <talsternberg@google.com>
+Date:   Fri Jul 31 13:05:18 2020 +0000
+
+    lint
+
+[33mcommit cbd4c7cfcf51b4bfbe6152465e77dc7115549920[m
+Merge: 78378b1 b27bc97
+Author: Tal <talsternberg@google.com>
+Date:   Fri Jul 31 12:54:54 2020 +0000
+
+    Merge branch 'master' of https://github.com/googleinterns/step171-2020 into TALSBRANCH
+
+[33mcommit 78378b11f1f20cac78048449f7f199c3e3f60e8b[m
+Author: Tal <talsternberg@google.com>
+Date:   Fri Jul 31 12:48:33 2020 +0000
+
+    modify Controller and Servlet. Servlet Error.
+
+[33mcommit 004b62c85ba605da84adbb4650c9cb2f576eaa66[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Thu Jul 30 23:55:47 2020 +0000
+
+    Update pom.xml with newest version of mockito-core.
+
+[33mcommit 5e2ff9d46cf37d0d4168a34176343ab09418ad59[m
+Merge: acbf3c3 b27bc97
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Thu Jul 30 23:35:22 2020 +0000
+
+    Fix merge issues.
+
+[33mcommit b27bc970358452dbe3f3ff2c2abd060fa38e7d0f[m
+Author: jcespejo <67278840+jcespejo@users.noreply.github.com>
+Date:   Thu Jul 30 19:22:15 2020 -0400
+
+    Update pom.xml
+
+[33mcommit acbf3c325eb42d63314b77947f5843cf900dade0[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Thu Jul 30 23:14:45 2020 +0000
+
+    Fix code format.
+
+[33mcommit 1f81214144bc4fbf9129b88985d671c1556eaaec[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Thu Jul 30 23:06:08 2020 +0000
+
+    Add Task Servlet tests.
+
+[33mcommit 01d4512f7aace22904329910a0c4b6e8c2eb2f37[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Thu Jul 30 22:59:51 2020 +0000
+
+    Fix bug with taskID creation.
+
+[33mcommit aff816b039b911bbd1fbeb1f69ba0f8981933dc1[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Thu Jul 30 20:51:27 2020 +0000
+
+    Move taskID creation to TaskData.java instead of in the servlet.
+
+[33mcommit f6d8c3f1ba8be394713b1c122e9ab46dfe58cbb8[m
+Author: Tal <talsternberg@google.com>
+Date:   Thu Jul 30 20:24:25 2020 +0000
+
+    modifying UserController to fit with teammate's structures. Add more to UserServlet.java
+
+[33mcommit ceb4aaf8d00150f38ac70e10c9fd75d957bed273[m
+Merge: 38d86f6 d129843
+Author: Tal <talsternberg@google.com>
+Date:   Thu Jul 30 19:22:03 2020 +0000
+
+    Merge branch 'master' of https://github.com/googleinterns/step171-2020 into TALSBRANCH
+
+[33mcommit 38d86f6d15b91b6d83262f5c87e165e93a4de086[m
+Author: Tal <talsternberg@google.com>
+Date:   Thu Jul 30 19:20:51 2020 +0000
+
+    starting basic server
+
+[33mcommit 96e7be604758ff21ef9d665f9b776437355ac47a[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Thu Jul 30 19:19:27 2020 +0000
+
+    Fix code format.
+
+[33mcommit c3802575d4834b0c506588499a00b04a030c880b[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Thu Jul 30 19:11:26 2020 +0000
+
+    Connect to Task Servlet via JavaScript. Default task is returned from servlet.
+
+[33mcommit e2bfcf5dbbe66e0e5f1ad25c8a6023c9537618a4[m
+Merge: 2405bee d129843
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Thu Jul 30 18:51:37 2020 +0000
+
+    Fix merge issues.
+
+[33mcommit d129843678c6f2d21084a08fbda7a3649d2c5392[m
+Author: jcespejo <67278840+jcespejo@users.noreply.github.com>
+Date:   Thu Jul 30 14:30:58 2020 -0400
+
+    Update javalint.yaml
+
+[33mcommit 52e8a80c76ea36bd4410c2d7cc7216a5fd94b4fb[m
+Author: jcespejo <67278840+jcespejo@users.noreply.github.com>
+Date:   Thu Jul 30 14:30:09 2020 -0400
+
+    Update javalint.yaml
+
+[33mcommit 2405beecf66a4ede4b4a3b17c0db05bff31f3017[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Thu Jul 30 17:56:34 2020 +0000
+
+    Add a Task Servlet.
+
+[33mcommit 467c20a4e9fb64f653ceaa4991b07cb8bfc0447a[m
+Merge: cf848d9 3514f15
+Author: Tzirliya <46089063+Tzirliya@users.noreply.github.com>
+Date:   Thu Jul 30 13:55:39 2020 -0400
+
+    Merge pull request #36 from googleinterns/TZIRLIYA_DEVELOPMENT
+    
+    Add TaskController Methods and Unit Tests
+
+[33mcommit 3514f153e21f94a8248a7b6cea518a95ad64c729[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Thu Jul 30 17:37:41 2020 +0000
+
+    Fix code format.
+
+[33mcommit 3106b1ae538a8c389e796d49438512e40153abb2[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Thu Jul 30 17:35:59 2020 +0000
+
+    Clean up code based on advice in pull request.
+
+[33mcommit fcd813687ae3fbf2a725e6aa66afffe78e4b2433[m
+Merge: 5072c3f cf848d9
+Author: Tal <talsternberg@google.com>
+Date:   Thu Jul 30 17:05:41 2020 +0000
+
+    Merge branch 'master' of https://github.com/googleinterns/step171-2020 into TALSBRANCH
+
+[33mcommit 5072c3fba9c752c957181f17226fb56d65f9bead[m
+Author: Tal <talsternberg@google.com>
+Date:   Thu Jul 30 16:31:57 2020 +0000
+
+    passing test for UserDataTest class
+
+[33mcommit b694136ced3b932981994c5c19423b7d5fff232d[m
+Author: Tal <talsternberg@google.com>
+Date:   Thu Jul 30 15:43:34 2020 +0000
+
+    failing test for UserDataTest
+
+[33mcommit cf848d9b6cfb3519e43e97284ed4cc5df62e237e[m
+Merge: 7a65a88 9298d68
+Author: talgsternberg <67270314+talgsternberg@users.noreply.github.com>
+Date:   Thu Jul 30 09:33:00 2020 -0400
+
+    Merge pull request #32 from googleinterns/TALSBRANCH
+    
+    Testing for UserController
+
+[33mcommit 9298d68571db55d421cdc0011f21f79eacfe96c6[m
+Merge: c456eaa 7a65a88
+Author: Tal <talsternberg@google.com>
+Date:   Thu Jul 30 13:26:30 2020 +0000
+
+    resolve conflicts
+
+[33mcommit c456eaa2edaa2965cb280f9dfe022b09b081e445[m
+Author: Tal <talsternberg@google.com>
+Date:   Thu Jul 30 13:06:01 2020 +0000
+
+    cleanup
+
+[33mcommit 7a65a885c512825ce76b16e76803f5ad6593909b[m
+Merge: 91ee935 d82082b
+Author: godsfavours <67076777+godsfavours@users.noreply.github.com>
+Date:   Wed Jul 29 17:24:05 2020 -0500
+
+    Merge pull request #30 from googleinterns/godsfavour_dev
+    
+    Project & ProjectController classes
+
+[33mcommit 91ee93508d6620372edbfeb2e6b50f95843a743d[m
+Author: jcespejo <67278840+jcespejo@users.noreply.github.com>
+Date:   Wed Jul 29 17:28:44 2020 -0400
+
+    Create javatest.yaml
+
+[33mcommit 0a026028dd31e6ca74a090f7eea462ed31a70090[m
+Author: jcespejo <67278840+jcespejo@users.noreply.github.com>
+Date:   Wed Jul 29 17:09:30 2020 -0400
+
+    Update appengine-web.xml
+
+[33mcommit 2fd5b629e08c5784831c2fc7bfa03e620676389a[m
+Author: jcespejo <67278840+jcespejo@users.noreply.github.com>
+Date:   Wed Jul 29 17:06:24 2020 -0400
+
+    Create .cloudbuild.yaml
+
+[33mcommit 718a7fbee3f55c187e3f77b16ad5bdcbf4d1094c[m
+Author: Tal <talsternberg@google.com>
+Date:   Wed Jul 29 20:54:32 2020 +0000
+
+    format plugin
+
+[33mcommit 7fdf75f5d4916b43f8b59ddbaa8ba5d1424304a5[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Wed Jul 29 20:42:12 2020 +0000
+
+    Remove print statements.
+
+[33mcommit 7b7ba3d8c4e0eb96753f5552b49e8ca0a50d98f8[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Wed Jul 29 20:17:05 2020 +0000
+
+    Fix code format.
+
+[33mcommit ff391ba762628d70f2d3f688e4301bec59aacc27[m
+Merge: 25da441 faeb0fc
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Wed Jul 29 20:11:25 2020 +0000
+
+    Merge branch 'master' of https://github.com/googleinterns/step171-2020 into TZIRLIYA_DEVELOPMENT
+
+[33mcommit 01d746ce15633f61ebb20a2f9d8001f979c778bf[m
+Author: Tal <talsternberg@google.com>
+Date:   Wed Jul 29 20:08:57 2020 +0000
+
+    more lint
+
+[33mcommit 25da441a952b660a147d8d45789ffbd70e82aae9[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Wed Jul 29 20:07:57 2020 +0000
+
+    Add unit tests.
+
+[33mcommit 1b3af00f667cd600cbd7e264303ffe6008c480fc[m
+Author: Tal <talsternberg@google.com>
+Date:   Wed Jul 29 20:01:58 2020 +0000
+
+    lint
+
+[33mcommit ac3c132f96eef1622412e41ab11c2415b4f68848[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Wed Jul 29 20:00:52 2020 +0000
+
+    Clean up unit tests.
+
+[33mcommit 8b195e357a57d90dc646c98e4b18b7000af2b27d[m
+Author: Tal <talsternberg@google.com>
+Date:   Wed Jul 29 19:59:20 2020 +0000
+
+    lint
+
+[33mcommit 3447a1b51942c2c3dd757b7a247a301149e3bb08[m
+Author: Tal <talsternberg@google.com>
+Date:   Wed Jul 29 19:57:03 2020 +0000
+
+    more lint errors
+
+[33mcommit d81a9b720e2d22c10c55f147e24c9d606732f355[m
+Author: Tal <talsternberg@google.com>
+Date:   Wed Jul 29 19:46:20 2020 +0000
+
+    more java presubmit lint
+
+[33mcommit be05ef0712d4862fc84ec5aa1dc73e5a0d46c95e[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Wed Jul 29 19:43:24 2020 +0000
+
+    Add getSubtasks() to TaskController.
+
+[33mcommit d82082b0eb8d6d2e991e3f563d43cc75f65159ec[m
+Author: Godsfavour <godsfavour@google.com>
+Date:   Wed Jul 29 18:52:45 2020 +0000
+
+    lint warning
+
+[33mcommit 0ed1d8b998e29df7cdfd90b454cc024ea62a6d32[m
+Author: Godsfavour <godsfavour@google.com>
+Date:   Wed Jul 29 18:51:06 2020 +0000
+
+    revert index.html and script.js
+
+[33mcommit 926a8dca2efa78361644f67da7d2fbf842a43f0f[m
+Author: Godsfavour <godsfavour@google.com>
+Date:   Wed Jul 29 18:49:36 2020 +0000
+
+    implement PR comments and start test classes
+
+[33mcommit 095aa3b02a5a0c6eb31629b6e4371a22f3b25c6d[m
+Author: Tal <talsternberg@google.com>
+Date:   Wed Jul 29 18:21:11 2020 +0000
+
+    more lint
+
+[33mcommit 34368dcc98fa9a4a0e4cd508edcb6f8b0d47003f[m
+Author: Tal <talsternberg@google.com>
+Date:   Wed Jul 29 18:15:20 2020 +0000
+
+    more lint
+
+[33mcommit 88551fe465ebdfa1e56fec24055c607aff54f39f[m
+Author: Tal <talsternberg@google.com>
+Date:   Wed Jul 29 18:06:07 2020 +0000
+
+    lint fixes
+
+[33mcommit 0efb442a919040712cc44a87938045f7e3195732[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Wed Jul 29 18:05:51 2020 +0000
+
+    Add getTaskByID() method to taskController. Add taskID parameter to Task entities in datastore.
+
+[33mcommit a317f3de8366315a68cd6d72ef56f3a64931f492[m
+Author: Tal <talsternberg@google.com>
+Date:   Wed Jul 29 17:29:30 2020 +0000
+
+    change all ints to longs and HashSets to ArrayLists. tests pass. Still no enum
+
+[33mcommit c74ca9beb328605efd056e798b8efb58b5f4e811[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Wed Jul 29 16:18:59 2020 +0000
+
+    Change HashSets to ArrayLists. Fix small bugs.
+
+[33mcommit 29aa104026858ff5c5a50169b806c9585d609b24[m
+Author: Tal <talsternberg@google.com>
+Date:   Wed Jul 29 15:59:32 2020 +0000
+
+    comment out all Skills enum for now bc interfereing w/tests
+
+[33mcommit 3bac14aab72af244eba1bc151c9560dbc9718ae9[m
+Author: Tal <talsternberg@google.com>
+Date:   Wed Jul 29 14:51:53 2020 +0000
+
+    still fail testAddUsers() no specific error
+
+[33mcommit 66c37ba0445af1611e556d99b797de8ef700f4b7[m
+Merge: fea478d faeb0fc
+Author: Tal <talsternberg@google.com>
+Date:   Wed Jul 29 14:32:16 2020 +0000
+
+    Merge branch 'master' of https://github.com/googleinterns/step171-2020 into TALSBRANCH
+
+[33mcommit fea478dbad5bce68f42824ca27744bf2a5bb8df1[m
+Author: Tal <talsternberg@google.com>
+Date:   Wed Jul 29 14:18:49 2020 +0000
+
+    trying to pass test cases
+
+[33mcommit faeb0fc5cf4bc5727b7b1fa1c84a38b250579bf7[m
+Merge: 82fae1c 1489e66
+Author: Tzirliya <46089063+Tzirliya@users.noreply.github.com>
+Date:   Wed Jul 29 10:09:56 2020 -0400
+
+    Merge pull request #35 from googleinterns/TZIRLIYA_DEVELOPMENT
+    
+    Tzirliya development
+
+[33mcommit 1489e66ac8399b9c309d9bd5ffa2aa3cb78bed5a[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Wed Jul 29 13:41:52 2020 +0000
+
+    Fix code format.
+
+[33mcommit 0aed43b407326cfdbed71d76bc0841d4d2f65fe3[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Wed Jul 29 13:38:23 2020 +0000
+
+    Split up TaskTest into two files for TaskData tests and TaskController tests.
+
+[33mcommit fd46c67396669121fbe570b5188d72ece09d7604[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Wed Jul 29 13:36:54 2020 +0000
+
+    Fix bug.
+
+[33mcommit 6ec1fdaa50250daef67a824a5ec18c579829df00[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Wed Jul 29 13:29:43 2020 +0000
+
+    Clean up code. Pass datastore into TaskController constructor.
+
+[33mcommit 576a240e01d8cf7fb2030d7cfe0b59d1735c7411[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Tue Jul 28 21:18:54 2020 +0000
+
+    Fix code format.
+
+[33mcommit acbeddc0fd847ebada569839269364b03e8bc63a[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Tue Jul 28 21:17:06 2020 +0000
+
+    Fix code format.
+
+[33mcommit 8192c14753e7909deb2f3df4e86147b38b923376[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Tue Jul 28 21:14:15 2020 +0000
+
+    Fix code format.
+
+[33mcommit a534f9a7295d92529371e700ff4b564852d40acb[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Tue Jul 28 20:59:05 2020 +0000
+
+    Clean up code.
+
+[33mcommit cfa6b53f8c2943e30a99c071b6449764b343e132[m
+Merge: dfca52f 82fae1c
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Tue Jul 28 20:38:15 2020 +0000
+
+    Fix merge issues.
+
+[33mcommit dfca52f67886d29024f33b091c31861cd285dc9a[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Tue Jul 28 20:36:09 2020 +0000
+
+    Add unit test for getTasks() in TaskController. Fix small bugs.
+
+[33mcommit aa87c8093ba82f603d5fd01bfc91070131efb3d9[m
+Author: Tal <talsternberg@google.com>
+Date:   Tue Jul 28 19:13:06 2020 +0000
+
+    update to reformat enum w/ entity. Still buggy
+
+[33mcommit ef45699a6816f6a6ba53c674eab66fc9e0b6787e[m
+Author: Tal <talsternberg@google.com>
+Date:   Tue Jul 28 15:51:29 2020 +0000
+
+    moved user tests
+
+[33mcommit b72af5f93564b80fa246a3bbe8c40c09252dac0f[m
+Author: Tal <talsternberg@google.com>
+Date:   Tue Jul 28 15:06:11 2020 +0000
+
+    move test classes
+
+[33mcommit 6beebe2fb1f337a33f5a7d27928b37dd2d1893b6[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Tue Jul 28 14:17:24 2020 +0000
+
+    Create TaskTest with unit tests. Fix bug with Status enum.
+
+[33mcommit 8fbd2239068d45545b9178b1be2694d607c0af07[m
+Merge: 8abe3e3 82fae1c
+Author: Tal <talsternberg@google.com>
+Date:   Tue Jul 28 14:06:10 2020 +0000
+
+    Merge branch 'master' of https://github.com/googleinterns/step171-2020 into TALSBRANCH
+
+[33mcommit 8abe3e3b336014a6ef16599c03af71fafc64becc[m
+Author: Tal <talsternberg@google.com>
+Date:   Tue Jul 28 14:04:53 2020 +0000
+
+    begin controller test
+
+[33mcommit 82fae1c73b8d52356cbed585563ee4082fdc0d1c[m
+Merge: 4cacd0a 1144b88
+Author: talgsternberg <67270314+talgsternberg@users.noreply.github.com>
+Date:   Tue Jul 28 10:03:30 2020 -0400
+
+    Merge pull request #29 from googleinterns/TALSBRANCH
+    
+    implement UserController and track user emails
+
+[33mcommit 4cacd0ad8017788ac06602bde95a93caf6b97040[m
+Merge: 0a15c69 aad52c8
+Author: jcespejo <67278840+jcespejo@users.noreply.github.com>
+Date:   Tue Jul 28 09:53:38 2020 -0400
+
+    Merge pull request #31 from googleinterns/jespejo_dev
+    
+    Sample test classes with local/mock Datastore testing
+
+[33mcommit aad52c8af71be1bb5b6238d53abb6e84ce94d9ac[m
+Author: John <jespejo@google.com>
+Date:   Tue Jul 28 13:52:07 2020 +0000
+
+    fix lint errors
+
+[33mcommit ff76549ca5458c6614b42e751eed6688dec578e6[m
+Merge: 1144b88 0a15c69
+Author: Tal <talsternberg@google.com>
+Date:   Tue Jul 28 12:08:32 2020 +0000
+
+    Merge branch 'master' of https://github.com/googleinterns/step171-2020 into TALSBRANCH
+
+[33mcommit f5431595207c0ca8721c4c70f78973397ad72b9c[m
+Author: Godsfavour <godsfavour@google.com>
+Date:   Mon Jul 27 22:32:59 2020 +0000
+
+    add unit test class for ProjectController
+
+[33mcommit acfdc1d01adb08cfc5f832e705f11ee1f50e5246[m
+Author: John <jespejo@google.com>
+Date:   Mon Jul 27 22:03:07 2020 +0000
+
+    fix lint
+
+[33mcommit c0751cecd4af364ee81d2b3ca3990c6a5aa628a4[m
+Author: John <jespejo@google.com>
+Date:   Mon Jul 27 21:54:18 2020 +0000
+
+    add local Datastore test classes
+
+[33mcommit 1144b883b814b6a760419f161e74274f693d2aa3[m
+Author: Tal <talsternberg@google.com>
+Date:   Mon Jul 27 20:29:00 2020 +0000
+
+    replace task w/user
+
+[33mcommit 3ea2bb65d0cc7f59beedea78a68332df6ede21da[m
+Author: Tal <talsternberg@google.com>
+Date:   Mon Jul 27 20:25:24 2020 +0000
+
+    lint
+
+[33mcommit 79793f7cad8e504ef05617e21ef644749db0913e[m
+Author: Tal <talsternberg@google.com>
+Date:   Mon Jul 27 20:07:35 2020 +0000
+
+    self creating object w/ entity in UserData class
+
+[33mcommit e1a1a14875f369bad2066a46eab9fdb739680ac3[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Mon Jul 27 20:00:14 2020 +0000
+
+    Clean up code.
+
+[33mcommit 3599d2b735280bc8b0343ea3fa2021f916393772[m
+Author: Tal <talsternberg@google.com>
+Date:   Mon Jul 27 19:53:41 2020 +0000
+
+    data object responsible for self build
+
+[33mcommit 59f6d646470bed7687c812783b469b17d858a23a[m
+Author: Godsfavour <godsfavour@google.com>
+Date:   Mon Jul 27 19:25:46 2020 +0000
+
+    format
+
+[33mcommit 27c3e26d2c5d9521803035bf9f5120ef9317c2ec[m
+Author: Godsfavour <godsfavour@google.com>
+Date:   Mon Jul 27 19:23:29 2020 +0000
+
+    comment out servlet
+
+[33mcommit 06c9806c96714fae9ba465ba4351e4e77728c483[m
+Author: Tal <talsternberg@google.com>
+Date:   Mon Jul 27 19:22:54 2020 +0000
+
+    lint
+
+[33mcommit d938ce37991f24e0ae86fcfc16a16e61ea816236[m
+Author: Godsfavour <godsfavour@google.com>
+Date:   Mon Jul 27 19:21:06 2020 +0000
+
+    call test servlet
+
+[33mcommit dd77c2e0063f6fcaa49def9038ea8786b5390444[m
+Author: Godsfavour <godsfavour@google.com>
+Date:   Mon Jul 27 19:19:28 2020 +0000
+
+    format file
+
+[33mcommit cb1ace7016f126363b7917de4324aec46a7d7563[m
+Author: Tal <talsternberg@google.com>
+Date:   Mon Jul 27 19:19:17 2020 +0000
+
+    lint
+
+[33mcommit 0c41c78eec89624cf79b76b5d1b3fa98c161cfce[m
+Author: Godsfavour <godsfavour@google.com>
+Date:   Mon Jul 27 19:19:02 2020 +0000
+
+    add json dependency
+
+[33mcommit d30e09ce1857905f79a3409faa8ee18637cbd541[m
+Author: Godsfavour <godsfavour@google.com>
+Date:   Mon Jul 27 19:18:12 2020 +0000
+
+    add plugin to auto format java code
+
+[33mcommit 27c49b7201d26de8168d3ebb2b10054ea44bcd56[m
+Author: Godsfavour <godsfavour@google.com>
+Date:   Mon Jul 27 19:16:44 2020 +0000
+
+    create servlet to test classes
+
+[33mcommit 86c0eddac05768b5be363ed51fc82994c563660b[m
+Author: Godsfavour <godsfavour@google.com>
+Date:   Mon Jul 27 19:16:00 2020 +0000
+
+    create ProjectController class
+
+[33mcommit d0b3020da04f7f9373385503e80216c2ff4e123d[m
+Author: Godsfavour <godsfavour@google.com>
+Date:   Mon Jul 27 19:15:29 2020 +0000
+
+    create ProjectData class
+
+[33mcommit 866e4aa7a557f31211af7f9f58f335cccc37e85f[m
+Author: Tal <talsternberg@google.com>
+Date:   Mon Jul 27 19:14:57 2020 +0000
+
+    lint spacing
+
+[33mcommit 3c95c5d71e8719b7b5800e3e0e58b465351b12dd[m
+Author: Tal <talsternberg@google.com>
+Date:   Mon Jul 27 19:11:11 2020 +0000
+
+    lint fix
+
+[33mcommit 17a2d4e3fa8667686205e6b9abed118803854e86[m
+Author: Tal <talsternberg@google.com>
+Date:   Mon Jul 27 19:01:26 2020 +0000
+
+    spacing
+
+[33mcommit 2011645c99a53d24afd2dc1926331391871b1f11[m
+Author: Tal <talsternberg@google.com>
+Date:   Mon Jul 27 18:55:59 2020 +0000
+
+    lint
+
+[33mcommit 2bb6578bf1ece67a703f98269988622888506389[m
+Author: Tal <talsternberg@google.com>
+Date:   Mon Jul 27 18:53:35 2020 +0000
+
+    more lint
+
+[33mcommit 7edf0c2414a11141cc6ddec03dddad7a5773494a[m
+Author: Tal <talsternberg@google.com>
+Date:   Mon Jul 27 18:48:48 2020 +0000
+
+    lint fixes
+
+[33mcommit acf04af957a23aa6b232c536b69cb4dd9f8cbb37[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Mon Jul 27 18:28:50 2020 +0000
+
+    Convert taskIDs to keys in deleteTasks() in TaskController through KeyFactory instead of querying.
+
+[33mcommit cef793dec79591bb5b3e8a525a460e8cdf2b72d3[m
+Author: Tal <talsternberg@google.com>
+Date:   Mon Jul 27 18:07:54 2020 +0000
+
+    reformatting
+
+[33mcommit db86be7d454e8b7294d3e558351551484ada03ef[m
+Author: Tal <talsternberg@google.com>
+Date:   Mon Jul 27 17:56:36 2020 +0000
+
+    implement UserController and track user emails
+
+[33mcommit 0a15c69b4fbbe5627b2e27f8afab0887994d2b92[m
+Merge: e53cb09 897ba1a
+Author: Tzirliya <46089063+Tzirliya@users.noreply.github.com>
+Date:   Mon Jul 27 13:08:17 2020 -0400
+
+    Merge pull request #28 from googleinterns/TZIRLIYA_DEVELOPMENT
+    
+    Update TaskData and TaskController
+
+[33mcommit e53cb0961e55a8d9b4b4cd0f5a934e6424b8c3a5[m
+Merge: 9152f22 4af2b08
+Author: talgsternberg <67270314+talgsternberg@users.noreply.github.com>
+Date:   Mon Jul 27 12:51:36 2020 -0400
+
+    Merge pull request #26 from googleinterns/TALSBRANCH
+    
+    new user class
+
+[33mcommit 4af2b087bc7928409936589d2273e9041a343a49[m
+Author: Tal <talsternberg@google.com>
+Date:   Mon Jul 27 16:03:16 2020 +0000
+
+    pass PS to constructor
+
+[33mcommit 8f125e22efb2981e63a1f17fafebb1f64d5816e9[m
+Author: Tal <talsternberg@google.com>
+Date:   Mon Jul 27 15:58:52 2020 +0000
+
+    hardcode booleans
+
+[33mcommit 897ba1a93be5709fbe9020844e3491f158ae261e[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Mon Jul 27 15:57:16 2020 +0000
+
+    Fix code format.
+
+[33mcommit 34e02a17242f8357fb0e75c425e0d12dc4ebe679[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Mon Jul 27 15:55:48 2020 +0000
+
+    Fix code format.
+
+[33mcommit d3e16985e9ff347edc759d3ea885de68fbe27b3a[m
+Author: Tal <talsternberg@google.com>
+Date:   Mon Jul 27 15:55:10 2020 +0000
+
+    fix tabs/spacing and add boolean to enum constructor
+
+[33mcommit 6dc9a860edf5f2594a4e504a1341aeeb7d7b9aa5[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Mon Jul 27 15:52:01 2020 +0000
+
+    Fix code format.
+
+[33mcommit 3d079f9793b185de276857a99243b114fd6def9a[m
+Author: Tal <talsternberg@google.com>
+Date:   Mon Jul 27 15:51:04 2020 +0000
+
+    implement Godsfavour's structure to enum
+
+[33mcommit 5bc0108b67ba341a0d75f64dec4b5a1a91524de6[m
+Merge: 795ed89 9152f22
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Mon Jul 27 15:46:00 2020 +0000
+
+    Merge branch 'master' of https://github.com/googleinterns/step171-2020 into TZIRLIYA_DEVELOPMENT
+
+[33mcommit 795ed89227cabc4a20b080ac51e62166587e2c54[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Mon Jul 27 15:45:21 2020 +0000
+
+    Add filter to query in deleteTasks() in TaskController.
+
+[33mcommit e0dd7bb67bae61bd3554969b29d18f765b5c2330[m
+Author: Tal <talsternberg@google.com>
+Date:   Mon Jul 27 15:05:11 2020 +0000
+
+    remove public from enum
+
+[33mcommit aca43bd48045f72ae813a72a733e7c97cdfd0f3b[m
+Author: Tal <talsternberg@google.com>
+Date:   Mon Jul 27 14:49:58 2020 +0000
+
+    enum contruction
+
+[33mcommit e636195a534ecc7e780655c29882e19a8c65b7ec[m
+Author: Tal <talsternberg@google.com>
+Date:   Mon Jul 27 14:44:19 2020 +0000
+
+    another attempt enum in lint
+
+[33mcommit 01469dd0e584b4e792a61f0b0a0c901c30103c51[m
+Author: Tal <talsternberg@google.com>
+Date:   Mon Jul 27 14:15:48 2020 +0000
+
+    missing ;
+
+[33mcommit 62596956003b90e940002f018c0be31ebb973fea[m
+Author: Tal <talsternberg@google.com>
+Date:   Mon Jul 27 14:11:44 2020 +0000
+
+    more lint
+
+[33mcommit 557a0e3ebfd7c140ef335f10769965b7ad1a9b1a[m
+Author: Tal <talsternberg@google.com>
+Date:   Mon Jul 27 14:04:35 2020 +0000
+
+    add enum
+
+[33mcommit 8d3603e89dee12ef78383462aeb24d8322be830f[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Mon Jul 27 13:55:59 2020 +0000
+
+    Add quantity and sort to getTasks() in TaskController.
+
+[33mcommit 78626a7dc335c913b1c37e9af530126e79b7db51[m
+Author: Tal <talsternberg@google.com>
+Date:   Mon Jul 27 13:43:55 2020 +0000
+
+    got rid of space for lint check
+
+[33mcommit cd083b61f6985c46109c0550ba99e1b239ff15c5[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Mon Jul 27 13:41:35 2020 +0000
+
+    Move TaskData/Entity transformations to the TaskData class.
+
+[33mcommit d16915f7e242d9079cc68d4a5a891610f35b9466[m
+Author: Tal <talsternberg@google.com>
+Date:   Mon Jul 27 13:39:24 2020 +0000
+
+    new user class
+
+[33mcommit 9152f22a47956633731186e4e9e3da3fadad6592[m
+Merge: a41c889 d238970
+Author: Tzirliya <46089063+Tzirliya@users.noreply.github.com>
+Date:   Mon Jul 27 09:14:25 2020 -0400
+
+    Merge pull request #25 from googleinterns/TZIRLIYA_DEVELOPMENT
+    
+    Create TaskData and TaskController objects
+
+[33mcommit d2389706c2857b7bf1b45410a470afd902386fd0[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Fri Jul 24 20:43:43 2020 +0000
+
+    Fix code format.
+
+[33mcommit 2ed70e1f4771bcc641cdfcb721e8cb56c334f1b6[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Fri Jul 24 20:40:02 2020 +0000
+
+    Fix code format.
+
+[33mcommit 29966aa86c94ee5db046e908440cd16056e0b13a[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Fri Jul 24 20:31:42 2020 +0000
+
+    Fix code format.
+
+[33mcommit 51ec1e3b2ea5df6f41bfca1acbe32988e914f2c5[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Fri Jul 24 20:29:43 2020 +0000
+
+    Fix code format.
+
+[33mcommit 554f07dd97d24bae75d9a347c6c582757dc18649[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Fri Jul 24 20:27:00 2020 +0000
+
+    Fix code format.
+
+[33mcommit d8409c66eaffb82543871771e5d5456747b138dc[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Fri Jul 24 20:18:20 2020 +0000
+
+    Update TaskController to work on many tasks and use Datastore.
+
+[33mcommit f58479869401bff41eaf55a31627fb4c00639da8[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Fri Jul 24 19:25:36 2020 +0000
+
+    Fix code format.
+
+[33mcommit 07d6478c683ea2a0d9f371f8e91e80aa5576e578[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Fri Jul 24 19:24:06 2020 +0000
+
+    Fix bug.
+
+[33mcommit a6b60e6ef02bf795e9b0ccd9e4ef04acbc35e90d[m
+Merge: 53c2daa a41c889
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Fri Jul 24 19:22:53 2020 +0000
+
+    Fix merge issues.
+
+[33mcommit a41c889de64430388f65077bc33def0b49be8bc7[m
+Merge: c71e4e8 0bbcbb4
+Author: talgsternberg <67270314+talgsternberg@users.noreply.github.com>
+Date:   Fri Jul 24 14:44:45 2020 -0400
+
+    Merge pull request #21 from googleinterns/TALSBRANCH
+    
+    New features on User_Profile.
+
+[33mcommit 53c2daaf5e155f0c7b6d994a57103780858d1585[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Fri Jul 24 18:44:32 2020 +0000
+
+    Fix code format.
+
+[33mcommit 893fc0b8dc565600f29afb80e7164c0f16ab1b17[m
+Merge: d96ca8d c71e4e8
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Fri Jul 24 18:34:59 2020 +0000
+
+    Merge branch 'master' of https://github.com/googleinterns/step171-2020 into TZIRLIYA_DEVELOPMENT
+
+[33mcommit d96ca8d6d98a896d6dc4d17c86d664df70113086[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Fri Jul 24 18:34:03 2020 +0000
+
+    Create TaskController object that limits actions performed on TaskData.
+
+[33mcommit c71e4e8f6b2218073c4ad021b143a0add87e23b0[m
+Merge: b4f09da a4258bf
+Author: godsfavours <67076777+godsfavours@users.noreply.github.com>
+Date:   Fri Jul 24 12:07:54 2020 -0500
+
+    Merge pull request #24 from googleinterns/godsfavour_dev
+    
+    Update login & main hub
+
+[33mcommit 0bbcbb4fbdc7066a81e7b3d22403fb6522e27aa2[m
+Author: Tal <talsternberg@google.com>
+Date:   Fri Jul 24 16:56:43 2020 +0000
+
+    lint fix
+
+[33mcommit c79d86a1b003e4024faec15b2563a5ab15a499a6[m
+Author: Tal <talsternberg@google.com>
+Date:   Fri Jul 24 16:53:20 2020 +0000
+
+    new settings page. have prototype give users their own page (default user) when they click user profile on top menu. If clicked on different user (user1) go to their page
+
+[33mcommit fe77af6f866158b8f9ffa965a41d500f10671597[m
+Author: Tal <talsternberg@google.com>
+Date:   Fri Jul 24 16:10:47 2020 +0000
+
+    lint
+
+[33mcommit a4da043f4c87d88f713077f9d122716347463c4a[m
+Author: Tal <talsternberg@google.com>
+Date:   Fri Jul 24 15:58:32 2020 +0000
+
+    more lint again
+
+[33mcommit 7c678ce5d3a111037eab543ee081029ee3cdfbc1[m
+Author: Tal <talsternberg@google.com>
+Date:   Fri Jul 24 15:55:02 2020 +0000
+
+    more lint
+
+[33mcommit fcac6cc63ce64556c5e264c4910cb76714f8b598[m
+Author: Tal <talsternberg@google.com>
+Date:   Fri Jul 24 15:51:09 2020 +0000
+
+    lint
+
+[33mcommit fe65eb358156bd2c14bde470e4ad16292158252d[m
+Author: Tal <talsternberg@google.com>
+Date:   Fri Jul 24 15:42:25 2020 +0000
+
+    lint
+
+[33mcommit 6c5d580ca5aff1d1b54fbcfb84d70df8a505628c[m
+Author: Tal <talsternberg@google.com>
+Date:   Fri Jul 24 15:33:25 2020 +0000
+
+    more lint fixes
+
+[33mcommit 825a834f19c042d2c24d02320d0f0f3f3b094def[m
+Author: Tal <talsternberg@google.com>
+Date:   Fri Jul 24 15:27:56 2020 +0000
+
+    lint
+
+[33mcommit a228a39ae326871dc370bef6b6bcdfbab9955eb1[m
+Author: Tal <talsternberg@google.com>
+Date:   Fri Jul 24 15:19:34 2020 +0000
+
+    lint
+
+[33mcommit 907bffd704ead8a30bf0a653a91af12be59159ac[m
+Author: Tal <talsternberg@google.com>
+Date:   Fri Jul 24 14:56:12 2020 +0000
+
+    even more js lint
+
+[33mcommit 5a43c7a6e085ef68847f4f9837f75073f1578928[m
+Author: Tal <talsternberg@google.com>
+Date:   Fri Jul 24 14:53:18 2020 +0000
+
+    more js lint
+
+[33mcommit 0e92c70afd97ca2b1cc9942d1266f74b1eb390ad[m
+Author: Tal <talsternberg@google.com>
+Date:   Fri Jul 24 14:49:53 2020 +0000
+
+    js lint
+
+[33mcommit 375c45dab82d545801f55e23a89f6bf05f6a2eaa[m
+Author: Tal <talsternberg@google.com>
+Date:   Fri Jul 24 14:45:33 2020 +0000
+
+    lint fixes
+
+[33mcommit 37385f9888be37613cbe5de12247afb89fda3d19[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Fri Jul 24 14:44:07 2020 +0000
+
+    Create TaskData object.
+
+[33mcommit a6e387d42352dfd95a675d23adfe06e5ad2e1b52[m
+Author: Tal <talsternberg@google.com>
+Date:   Fri Jul 24 14:36:45 2020 +0000
+
+    functionality with priority task display
+
+[33mcommit d93ce26b0de7bc81ec4b745770d511dbd05709ff[m
+Author: Tal <talsternberg@google.com>
+Date:   Fri Jul 24 14:15:24 2020 +0000
+
+    get rid of buggy weirdness ... not sure what happened. bad merge
+
+[33mcommit 7734bc112f4359aad04420b9b75b9f44ce16011c[m
+Author: Tal <talsternberg@google.com>
+Date:   Fri Jul 24 13:48:38 2020 +0000
+
+    Revert "error in priority skill output"
+    
+    This reverts commit 105f8bacb51e347cacb14b605880bec2cc50607d.
+
+[33mcommit fdb2c17bc02de02a93f612a09eb204986ee532f8[m
+Merge: 105f8ba b4f09da
+Author: Tal <talsternberg@google.com>
+Date:   Fri Jul 24 13:40:07 2020 +0000
+
+    js errors for priority skills
+
+[33mcommit 105f8bacb51e347cacb14b605880bec2cc50607d[m
+Author: Tal <talsternberg@google.com>
+Date:   Fri Jul 24 13:38:10 2020 +0000
+
+    error in priority skill output
+
+[33mcommit 992ea200ca02ccf5df94ddb0fa4e002d904498f7[m
+Merge: 25b6250 b4f09da
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Fri Jul 24 13:17:27 2020 +0000
+
+    Merge branch 'master' of https://github.com/googleinterns/step171-2020 into TZIRLIYA_DEVELOPMENT
+
+[33mcommit 25b6250fd021dd44196cf8f1b0ae4587e2e8004a[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Fri Jul 24 13:14:30 2020 +0000
+
+    Choose random project or task when goToProject() or goToTask() is empty based on amount of mock objects instead of hard-coded numbers.
+
+[33mcommit b4f09dae8dfcd261e6c6d77936c559e97132651d[m
+Merge: 0987d3d 8d5e849
+Author: Tzirliya <46089063+Tzirliya@users.noreply.github.com>
+Date:   Fri Jul 24 08:45:20 2020 -0400
+
+    Merge pull request #23 from googleinterns/TZIRLIYA_DEVELOPMENT
+    
+    Add Projects
+
+[33mcommit 7ee5b2b1b6c6e250c3510eaf6f733c1e938d9fe1[m
+Author: Tal <talsternberg@google.com>
+Date:   Fri Jul 24 12:20:19 2020 +0000
+
+    implement feedback: page-type-container, no admin attribute for user, list of strings for major and skills
+
+[33mcommit a4258bf5817aa4d3e6099149c1f38203e22dd992[m
+Author: Godsfavour <godsfavour@google.com>
+Date:   Thu Jul 23 22:48:20 2020 +0000
+
+    add comment to main_hub.html
+
+[33mcommit 6cc87a4cebd026b8d9e042bfe8a2700ffcbc939d[m
+Author: Godsfavour <godsfavour@google.com>
+Date:   Thu Jul 23 22:45:04 2020 +0000
+
+    remove my goToProject() function
+
+[33mcommit dad93bc502ec78a8f7907094aaf39d03df302f3a[m
+Author: Godsfavour <godsfavour@google.com>
+Date:   Thu Jul 23 22:41:40 2020 +0000
+
+    remove trailing whitespace from line2
+
+[33mcommit fbb71eccadf25186348378cc5df327b5a0d8f285[m
+Author: Godsfavour <godsfavour@google.com>
+Date:   Thu Jul 23 22:39:06 2020 +0000
+
+    remove trailing whitespace from line
+
+[33mcommit 8ef7923cdb1ef4ae403af5cbbcb654ac8582d26e[m
+Author: Godsfavour <godsfavour@google.com>
+Date:   Thu Jul 23 22:23:00 2020 +0000
+
+    fix lint errors
+
+[33mcommit 87b5aa61a5f062bb2b4bbae0a25178fd0cabd19e[m
+Merge: dd98484 0737cb8
+Author: Godsfavour <godsfavour@google.com>
+Date:   Thu Jul 23 21:41:32 2020 +0000
+
+    Merge branch 'godsfavour_dev' of https://github.com/googleinterns/step171-2020 into godsfavour_dev
+
+[33mcommit dd9848405c74350def2a42857b035f2d5ef307fe[m
+Author: Godsfavour <godsfavour@google.com>
+Date:   Thu Jul 23 21:37:06 2020 +0000
+
+    fix indentation in css
+
+[33mcommit 1504664f866ce958c1cc3f93fca34d517af8315c[m
+Author: Godsfavour <godsfavour@google.com>
+Date:   Thu Jul 23 21:36:12 2020 +0000
+
+    revert readme
+
+[33mcommit ec33932e76d59f784d03bbd7e42c48838db6a5b6[m
+Author: Godsfavour <godsfavour@google.com>
+Date:   Thu Jul 23 21:33:04 2020 +0000
+
+    add function to load projects pages with different query strings
+
+[33mcommit 4bf2402b173180816bbf04899937b6dc3673ac0b[m
+Author: Godsfavour <godsfavour@google.com>
+Date:   Thu Jul 23 21:31:01 2020 +0000
+
+    add style to html & main
+
+[33mcommit 8555265298753f87d0433c3fdc879e303d8dbf20[m
+Author: Godsfavour <godsfavour@google.com>
+Date:   Thu Jul 23 21:30:30 2020 +0000
+
+    update main hub  html
+
+[33mcommit b9776f5affe402ba4102b6d4cbde3f79c60f7401[m
+Author: Godsfavour <godsfavour@google.com>
+Date:   Thu Jul 23 21:29:58 2020 +0000
+
+    update login page html
+
+[33mcommit 866ce085de38f14f2c1cf00f5504c135fd591577[m
+Author: Godsfavour <godsfavour@google.com>
+Date:   Thu Jul 23 21:29:23 2020 +0000
+
+    add image folder and two feature images
+
+[33mcommit 8b388e47e9c54619c3eac4003cc4c906175d7c74[m
+Author: Godsfavour <godsfavour@google.com>
+Date:   Thu Jul 23 21:12:17 2020 +0000
+
+    change readme
+
+[33mcommit f2b823e921323a1845ad6494fd239619be259ced[m
+Author: Tal <talsternberg@google.com>
+Date:   Thu Jul 23 21:14:06 2020 +0000
+
+    more lint
+
+[33mcommit 0737cb82cad513a9e886f004e86913715ee84e50[m
+Author: Godsfavour <godsfavour@google.com>
+Date:   Thu Jul 23 21:12:17 2020 +0000
+
+    change readme
+
+[33mcommit 8d5e8493e04283eb1efb89317fa89a35f2f9312e[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Thu Jul 23 21:11:32 2020 +0000
+
+    Fix code format.
+
+[33mcommit 94a75805fe651bc9576f5418d2820ed312b6ba04[m
+Author: Tal <talsternberg@google.com>
+Date:   Thu Jul 23 21:10:45 2020 +0000
+
+    lint fix
+
+[33mcommit 0e094384f9ac6822445aba09cf6925273c4a398e[m
+Merge: fc0e090 0987d3d
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Thu Jul 23 21:04:49 2020 +0000
+
+    Merge branch 'master' of https://github.com/googleinterns/step171-2020 into TZIRLIYA_DEVELOPMENT
+
+[33mcommit fc0e090f9a095a9b6319a05bbaf5d01bab2b0bef[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Thu Jul 23 21:04:19 2020 +0000
+
+    Update navigation bar to redirect through JavaScript functions.
+
+[33mcommit 4b125f00f16eb9cddc2c21e413489060d8303d3a[m
+Author: Tal <talsternberg@google.com>
+Date:   Thu Jul 23 21:03:32 2020 +0000
+
+    redirect to default or specific users (used Tzirliya's model)
+
+[33mcommit 8f83ae76f8f61cdc4082dbad7d92d73625cd3c1c[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Thu Jul 23 20:55:14 2020 +0000
+
+    Add 'go to project' button on Task Page.
+
+[33mcommit 3450f67691aa83f80336e79176a92ea5692e2696[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Thu Jul 23 19:38:18 2020 +0000
+
+    Add mock projects and more mock tasks. Projects Page is filled based on the specific mock project chosen.
+
+[33mcommit ed5d471a88f49c5ea5707f4af0c8f4c94759b62d[m
+Author: Tal <talsternberg@google.com>
+Date:   Thu Jul 23 19:30:10 2020 +0000
+
+    lint again
+
+[33mcommit 6caee40f6e0688a51d143c09d1186641c021eaeb[m
+Author: Tal <talsternberg@google.com>
+Date:   Thu Jul 23 19:27:49 2020 +0000
+
+    lit error fix
+
+[33mcommit 9da15394da4203843fe5b5f21d46f57d44016d17[m
+Author: Tal <talsternberg@google.com>
+Date:   Thu Jul 23 19:20:26 2020 +0000
+
+    new way to add skills.
+
+[33mcommit 6f68b46d6cace97b27d2d3ad3abdb0ff3c923137[m
+Author: Tal <talsternberg@google.com>
+Date:   Thu Jul 23 16:35:57 2020 +0000
+
+    implement updates based on feeback from last commit
+
+[33mcommit 0dcfc06f04576b4e9655a6ab22c33c26b7e69c84[m
+Merge: c25ceda 0987d3d
+Author: Tal <talsternberg@google.com>
+Date:   Thu Jul 23 16:16:32 2020 +0000
+
+    Merge branch 'master' of https://github.com/googleinterns/step171-2020 into TALSBRANCH
+
+[33mcommit 0987d3d40936543fcebaa2eae42fd9cb8171a572[m
+Merge: 99c4c4f b8452fc
+Author: Tzirliya <46089063+Tzirliya@users.noreply.github.com>
+Date:   Thu Jul 23 11:52:23 2020 -0400
+
+    Merge pull request #22 from googleinterns/TZIRLIYA_DEVELOPMENT
+    
+    Tzirliya development
+
+[33mcommit b8452fce1600bd5fc6aa65b857155262f87149f8[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Thu Jul 23 15:33:02 2020 +0000
+
+    Fix code format.
+
+[33mcommit c25ceda4bc9df0bbe1411bf7717ade812c19bd19[m
+Author: Tal <talsternberg@google.com>
+Date:   Thu Jul 23 15:26:01 2020 +0000
+
+    fix lint
+
+[33mcommit 014a5b1261fb0b376bc431900d8fe04f423abbcf[m
+Merge: 8e6e873 99c4c4f
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Thu Jul 23 15:25:51 2020 +0000
+
+    Merge branch 'master' of https://github.com/googleinterns/step171-2020 into TZIRLIYA_DEVELOPMENT
+
+[33mcommit 8e6e873486c9b5cad88a521776f68430c5624f86[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Thu Jul 23 15:25:37 2020 +0000
+
+    Clean up code.
+
+[33mcommit fb196ee0b915c9799b2a54cbad36eec3043adeba[m
+Merge: 4241dcb 99c4c4f
+Author: Tal <talsternberg@google.com>
+Date:   Thu Jul 23 14:42:45 2020 +0000
+
+    Merge branch 'master' of https://github.com/googleinterns/step171-2020 into TALSBRANCH
+
+[33mcommit 4241dcb605eb0cc7a63c6b1187770e464535d778[m
+Author: Tal <talsternberg@google.com>
+Date:   Thu Jul 23 14:41:27 2020 +0000
+
+    add confirm to edit outline and user skills
+
+[33mcommit 99c4c4f506e200d90d96a72bcd9d953f46d4c88e[m
+Merge: e513e04 f69eb00
+Author: Tzirliya <46089063+Tzirliya@users.noreply.github.com>
+Date:   Thu Jul 23 10:35:54 2020 -0400
+
+    Merge pull request #20 from googleinterns/TZIRLIYA_DEVELOPMENT
+    
+    Tzirliya development
+
+[33mcommit 1acd8f5ea20e3fa40b7ebe630e976fd291d942ee[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Thu Jul 23 14:31:28 2020 +0000
+
+    Add specific users to Task Page depending on task clicked.
+
+[33mcommit f7482473eb61e5a6ae95d456c2e8715235776cce[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Thu Jul 23 14:05:59 2020 +0000
+
+    Add specific subtasks to Task Page depending on task clicked.
+
+[33mcommit f69eb0093e2436ff919c4325c7bd6048bc5b3e61[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Wed Jul 22 20:42:11 2020 +0000
+
+    Fix code format.
+
+[33mcommit fb54808571794e377e9db4ef29ddd0eb100821d7[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Wed Jul 22 20:40:50 2020 +0000
+
+    Fix code format.
+
+[33mcommit e5b8a4fcaa8a449ce1f383c8b5b3a6e879e7b615[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Wed Jul 22 20:38:06 2020 +0000
+
+    Fix code format.
+
+[33mcommit 96cfb2be0041f86314ce5def28bbf44cc8327dbe[m
+Merge: bd13502 e513e04
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Wed Jul 22 20:12:46 2020 +0000
+
+    Fix merge issues.
+
+[33mcommit e513e04e9e855c0f49182200827cd7dc35f4cc65[m
+Merge: 95c3928 0aca005
+Author: Tzirliya <46089063+Tzirliya@users.noreply.github.com>
+Date:   Wed Jul 22 16:10:42 2020 -0400
+
+    Merge pull request #16 from googleinterns/TALSBRANCH
+    
+    basic outline of checklist. not interactive based on checking
+
+[33mcommit bd13502a161fc49710c2b6f4d9cba3f27b482e9a[m
+Merge: f92c93a 95c3928
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Wed Jul 22 20:08:01 2020 +0000
+
+    Merge branch 'master' of https://github.com/googleinterns/step171-2020 into TZIRLIYA_DEVELOPMENT
+
+[33mcommit f92c93a606c40bca125f1082edd8bddc6a7b530c[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Wed Jul 22 20:07:32 2020 +0000
+
+    Task buttons from Project and Task Pages will direct to corresponding Task Page.
+
+[33mcommit 0c1eb3a2920051e7d4f88572032ef27687d52a01[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Wed Jul 22 19:47:25 2020 +0000
+
+    Task name, description, and status appear from random hardcoded tasks.
+
+[33mcommit 95c3928d33e403c1e3dfff48d4fbb133187a88c5[m
+Merge: 35c4b5d 9f639b4
+Author: jcespejo <67278840+jcespejo@users.noreply.github.com>
+Date:   Wed Jul 22 14:58:30 2020 -0400
+
+    Merge pull request #19 from googleinterns/INIT
+    
+    Update eslint config
+
+[33mcommit 9f639b4e8ff810c847f902e0a1af47062582e78e[m[33m ([m[1;31morigin/INIT[m[33m)[m
+Author: John <jespejo@google.com>
+Date:   Wed Jul 22 18:57:50 2020 +0000
+
+    update eslint config
+
+[33mcommit 8e49695f6be7f748d627c126afd19d205f8ded4b[m
+Author: John <jespejo@google.com>
+Date:   Wed Jul 22 18:56:53 2020 +0000
+
+    update eslint config
+
+[33mcommit 35c4b5d226368f8bd61e8512bb649c97790cbaa1[m
+Merge: e85af06 31c10c0
+Author: jcespejo <67278840+jcespejo@users.noreply.github.com>
+Date:   Wed Jul 22 14:29:37 2020 -0400
+
+    Merge pull request #18 from googleinterns/INIT
+    
+    update eslint config
+
+[33mcommit 31c10c0d701615fc0d65ca7b66a585d3e70b5ede[m
+Author: John <jespejo@google.com>
+Date:   Wed Jul 22 18:28:45 2020 +0000
+
+    update eslint config
+
+[33mcommit 0aca005627a0b4100710157ff1d944f0420b3946[m
+Author: Tal <talsternberg@google.com>
+Date:   Wed Jul 22 18:05:31 2020 +0000
+
+    recommit. last one might've not worked
+
+[33mcommit e85af060e41ee3a12bbc82bd0669bed79557a59f[m
+Merge: 7c10e05 08a8677
+Author: jcespejo <67278840+jcespejo@users.noreply.github.com>
+Date:   Wed Jul 22 13:57:45 2020 -0400
+
+    Merge pull request #14 from googleinterns/INIT
+    
+    JSP Example
+
+[33mcommit 7c10e05d0b9a99e98a746a62ed04680a8e25dd89[m
+Merge: d0ca576 f2eb32f
+Author: Tzirliya <46089063+Tzirliya@users.noreply.github.com>
+Date:   Wed Jul 22 13:40:54 2020 -0400
+
+    Merge pull request #17 from googleinterns/TZIRLIYA_DEVELOPMENT
+    
+    Tzirliya development
+
+[33mcommit 8ac293d58fa9b92078f1d4e3d276652240f6b456[m
+Author: Tal <talsternberg@google.com>
+Date:   Wed Jul 22 17:19:31 2020 +0000
+
+    try to fix lint errors
+
+[33mcommit 6d25ae0bb6283bd49cd29dad82e6068b6e7138f4[m
+Author: Tal <talsternberg@google.com>
+Date:   Wed Jul 22 17:11:32 2020 +0000
+
+    try to fix lint errors
+
+[33mcommit f2eb32fe69c294f5c26d4433c5a59bccd3b3c54f[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Wed Jul 22 17:05:38 2020 +0000
+
+    Fix code format.
+
+[33mcommit 0f31d79efd6393c487b726577e6cead56cd5e634[m
+Merge: 34dee49 d0ca576
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Wed Jul 22 17:01:21 2020 +0000
+
+    Fix merge issues.
+
+[33mcommit 45c3626d7f9a6f3b13dd559aedf967c780f94e73[m
+Merge: 4584adb d0ca576
+Author: Tal <talsternberg@google.com>
+Date:   Wed Jul 22 16:59:14 2020 +0000
+
+    Merge branch 'master' of https://github.com/googleinterns/step171-2020 into TALSBRANCH
+
+[33mcommit 4584adb6e2dbb4a92916ebc2c77bedb52ff02e1b[m
+Author: Tal <talsternberg@google.com>
+Date:   Wed Jul 22 16:51:20 2020 +0000
+
+    basic outline of checklist. not interactive based on checking. no submit or integration into form.
+
+[33mcommit d0ca576df5ba4c3ea0a17818d50eb947a9c76bd1[m
+Merge: 44e15d6 b685d7c
+Author: jcespejo <67278840+jcespejo@users.noreply.github.com>
+Date:   Wed Jul 22 12:50:50 2020 -0400
+
+    Merge pull request #15 from googleinterns/TALSBRANCH
+    
+    Add some content to user_profile and include css
+
+[33mcommit b685d7c22502ca0f8ea91b5429d093ff9c6dccd1[m
+Author: Tal <tal.g.sternberg.23@dartmouth.edu>
+Date:   Wed Jul 22 15:45:28 2020 +0000
+
+    fix lint error
+
+[33mcommit e1c701bd032292a4748dafc4c8035a924730aaac[m
+Merge: 43269c0 84bc018
+Author: Tal <tal.g.sternberg.23@dartmouth.edu>
+Date:   Wed Jul 22 14:55:52 2020 +0000
+
+    Merge branch 'TALSBRANCH' of https://github.com/googleinterns/step171-2020 into TALSBRANCH
+
+[33mcommit 43269c0365dd8d1a0b19bd49c22d24580cb76b6d[m
+Author: Tal <tal.g.sternberg.23@dartmouth.edu>
+Date:   Wed Jul 22 14:54:25 2020 +0000
+
+    test
+
+[33mcommit fd2fe3eda516fc514ff560b8a27c06bc337a65c5[m
+Author: Tal <tal.g.sternberg.23@dartmouth.edu>
+Date:   Wed Jul 22 14:44:49 2020 +0000
+
+    basic updates to user profile. no checklist yet
+
+[33mcommit 936621807130dfeebee79a17e12a3d3d424fa188[m
+Merge: 9c7c6f8 44e15d6
+Author: Tal <tal.g.sternberg.23@dartmouth.edu>
+Date:   Wed Jul 22 14:43:52 2020 +0000
+
+    Merge branch 'master' of https://github.com/googleinterns/step171-2020 into TALSBRANCH
+
+[33mcommit 44e15d66e1a0b236eb8d053ddf852807688db0ff[m
+Merge: cb68828 52ea4a3
+Author: Tzirliya <46089063+Tzirliya@users.noreply.github.com>
+Date:   Wed Jul 22 09:53:16 2020 -0400
+
+    Merge pull request #13 from googleinterns/TZIRLIYA_DEVELOPMENT
+    
+    Tzirliya development
+
+[33mcommit 34dee499d2b3e23c1b73f89685e959f563c5fa4e[m
+Merge: 4fb7cc6 cb68828
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Wed Jul 22 13:51:33 2020 +0000
+
+    Merge branch 'master' of https://github.com/googleinterns/step171-2020 into TZIRLIYA_DEVELOPMENT
+
+[33mcommit cb68828626d8280a3fdd1b3d8795b28696db4701[m
+Merge: 35bf80f 3252a7b
+Author: Tzirliya <46089063+Tzirliya@users.noreply.github.com>
+Date:   Wed Jul 22 09:51:00 2020 -0400
+
+    Merge pull request #9 from googleinterns/godsfavour_dev
+    
+    Login and Main Hub prototypes
+
+[33mcommit 9c7c6f83b0b3dbd0d545c12ed975895ab9df33e2[m
+Author: Tal <tal.g.sternberg.23@dartmouth.edu>
+Date:   Wed Jul 22 13:47:08 2020 +0000
+
+    add basic beginning of user profile. no checklist yet
+
+[33mcommit 00cfab60f5df46feac697cc3cd550a9be27c6046[m
+Merge: 0f35335 35bf80f
+Author: Tal <tal.g.sternberg.23@dartmouth.edu>
+Date:   Wed Jul 22 13:45:10 2020 +0000
+
+    Merge branch 'master' of https://github.com/googleinterns/step171-2020 into TALSBRANCH
+
+[33mcommit 0f35335a4c630efb43aaae83edb0a9ffbcca39b7[m
+Author: Tal <tal.g.sternberg.23@dartmouth.edu>
+Date:   Wed Jul 22 13:41:15 2020 +0000
+
+    begin basic user_profile. no checklist yet
+
+[33mcommit 4fb7cc6634e67bc8a8f37ce144efd10710913772[m
+Merge: 655a30d 35bf80f
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Wed Jul 22 13:32:07 2020 +0000
+
+    Merge branch 'master' of https://github.com/googleinterns/step171-2020 into TZIRLIYA_DEVELOPMENT
+
+[33mcommit 655a30d7ca06b3eeab951b267535d2473ced9834[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Wed Jul 22 13:31:57 2020 +0000
+
+    Add formatting to lists of tasks and users on the Project and Task Pages.
+
+[33mcommit 3252a7b7b10bd2618bf009c973ae81d793b54b1f[m
+Author: Godsfavour <g5simon@stanford.edu>
+Date:   Tue Jul 21 22:48:52 2020 +0000
+
+    fix style
+
+[33mcommit 77c3fac75affa0fb658c4e03c3020f387c79d74e[m
+Author: Godsfavour <g5simon@stanford.edu>
+Date:   Tue Jul 21 22:46:02 2020 +0000
+
+    fix style
+
+[33mcommit 61ec2e2420925c8609e1d33cc13aecfc61d91ac5[m
+Author: Godsfavour <g5simon@stanford.edu>
+Date:   Tue Jul 21 22:38:53 2020 +0000
+
+    appease linters
+
+[33mcommit 3d1748ed49afc08ab145b6c99dd67493a5166d89[m
+Merge: d43916c 35bf80f
+Author: Godsfavour <g5simon@stanford.edu>
+Date:   Tue Jul 21 22:17:59 2020 +0000
+
+    Merge branch 'master' of https://github.com/googleinterns/step171-2020 into godsfavour_dev
+
+[33mcommit d43916cd0fb457db085f1f97a59c3e904ba822d5[m
+Merge: a5e975f 5287fa2
+Author: Godsfavour <g5simon@stanford.edu>
+Date:   Tue Jul 21 22:15:46 2020 +0000
+
+    Merge branch 'godsfavour_dev' of https://github.com/googleinterns/step171-2020 into godsfavour_dev
+
+[33mcommit a5e975f492711868ba12588ab900b7dabff3fa09[m
+Author: Godsfavour <g5simon@stanford.edu>
+Date:   Tue Jul 21 22:13:43 2020 +0000
+
+    create prototype of main hub page
+
+[33mcommit 1591693e06085e4d7a673486fb30451736e00b21[m
+Author: Godsfavour <g5simon@stanford.edu>
+Date:   Tue Jul 21 21:56:16 2020 +0000
+
+    create prototpye login page
+
+[33mcommit 35bf80f9371e6385f06f14f433dd6046133f8ba4[m
+Author: jcespejo <67278840+jcespejo@users.noreply.github.com>
+Date:   Tue Jul 21 17:29:27 2020 -0400
+
+    Create CODEOWNERS
+
+[33mcommit 08a8677246fd4ef6080a5b21252bedc438c1fb5d[m
+Author: John <jespejo@google.com>
+Date:   Tue Jul 21 21:20:01 2020 +0000
+
+    add jsp example
+
+[33mcommit 52ea4a38546864d065b091d6e4958ce67fe3f394[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Tue Jul 21 20:32:46 2020 +0000
+
+    Clean up code.
+
+[33mcommit b1bacfba31bd0c4cb78d1f1643004e601598729a[m
+Merge: f5ade6b 4c1489c
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Tue Jul 21 20:27:54 2020 +0000
+
+    Merge branch 'master' of https://github.com/googleinterns/step171-2020 into TZIRLIYA_DEVELOPMENT
+
+[33mcommit f5ade6b68ebaff45a0c34998fa6daa9c9ba21acc[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Tue Jul 21 20:26:38 2020 +0000
+
+    Add basic content to Task Page.
+
+[33mcommit f353a3da053e9b807344907476c9f41cb5dc8d60[m
+Author: Godsfavour <g5simon@stanford.edu>
+Date:   Tue Jul 21 20:01:59 2020 +0000
+
+    create html for login page
+
+[33mcommit b5bf71a58d636d89e8f21369660ebff19a64c5d6[m
+Author: Godsfavour <g5simon@stanford.edu>
+Date:   Tue Jul 21 17:43:32 2020 +0000
+
+    update readme
+
+[33mcommit 11bb8aef5692baeef2f5626e5da1ab69d48179dd[m
+Author: Tal <tal.g.sternberg.23@dartmouth.edu>
+Date:   Tue Jul 21 19:54:01 2020 +0000
+
+    delete my file w incorrect name
+
+[33mcommit b56529952f98b3100c2631cd84a0d6673969a111[m
+Author: Tal <tal.g.sternberg.23@dartmouth.edu>
+Date:   Tue Jul 21 14:45:12 2020 +0000
+
+    create UserProfile page
+
+[33mcommit 84bc018e2875cc6e005be6434b14fe439dffe911[m
+Author: Tal <tal.g.sternberg.23@dartmouth.edu>
+Date:   Tue Jul 21 19:54:01 2020 +0000
+
+    delete my file w incorrect name
+
+[33mcommit 60c8b2ab7a8ed1eacc07c4d3261c50f7f27552f5[m
+Merge: 3d408d5 4c1489c
+Author: Tal <tal.g.sternberg.23@dartmouth.edu>
+Date:   Tue Jul 21 19:51:57 2020 +0000
+
+    committing so I can update: nothing real to commit
+
+[33mcommit 3d408d5f72ac7439318c3ccce3fc76b00d62048c[m
+Merge: c7445d8 8fce6f1
+Author: Tal <tal.g.sternberg.23@dartmouth.edu>
+Date:   Tue Jul 21 19:47:23 2020 +0000
+
+    delete file and pull files from master to be consistent
+
+[33mcommit 4c1489c20e3b153afddaaadb9feb80b1fabb6eb8[m
+Merge: 3ecaa0d 3a8c039
+Author: jcespejo <67278840+jcespejo@users.noreply.github.com>
+Date:   Tue Jul 21 15:46:55 2020 -0400
+
+    Merge pull request #12 from googleinterns/INIT
+    
+    Init
+
+[33mcommit 3a8c03907a14ba42825300795e6311b7b17a874d[m
+Author: John <jespejo@google.com>
+Date:   Tue Jul 21 19:46:10 2020 +0000
+
+    update eslint config
+
+[33mcommit 3ecaa0db5962f1e8ab2df686ffb4ab53023145b6[m
+Merge: 29097a0 3d87305
+Author: Tzirliya <46089063+Tzirliya@users.noreply.github.com>
+Date:   Tue Jul 21 15:45:37 2020 -0400
+
+    Merge pull request #10 from googleinterns/TZIRLIYA_DEVELOPMENT
+    
+    Add buttons to Project Page
+
+[33mcommit a1ff550046275ee9a75895d397638e89dd789fa0[m
+Merge: 905d44a 29097a0
+Author: John <jespejo@google.com>
+Date:   Tue Jul 21 19:44:46 2020 +0000
+
+    Merge branch 'master' of https://github.com/googleinterns/step171-2020 into INIT
+
+[33mcommit 905d44a7ac2d38cd6dfa223102b4b9ae2a760a01[m
+Author: John <jespejo@google.com>
+Date:   Tue Jul 21 19:43:56 2020 +0000
+
+    update eslint config
+
+[33mcommit 29097a043202ab2af05c095b9855c7f8a01aebb0[m
+Merge: 8fce6f1 4f31f1b
+Author: jcespejo <67278840+jcespejo@users.noreply.github.com>
+Date:   Tue Jul 21 15:38:25 2020 -0400
+
+    Merge pull request #11 from googleinterns/INIT
+    
+    Update eslint config
+
+[33mcommit 4f31f1b6671037ca4b37e29027ab609ff66e74c0[m
+Merge: 1b3cfb9 8fce6f1
+Author: jcespejo <67278840+jcespejo@users.noreply.github.com>
+Date:   Tue Jul 21 15:37:58 2020 -0400
+
+    Merge branch 'master' into INIT
+
+[33mcommit 1b3cfb9ac414db9d5338924a821cfd3e0b9e6a7d[m
+Author: jcespejo <67278840+jcespejo@users.noreply.github.com>
+Date:   Tue Jul 21 15:35:53 2020 -0400
+
+    Delete bad.js
+
+[33mcommit 8300bc15ba0f63fc7345bbf107d0ae83f6091d39[m
+Author: John <jespejo@google.com>
+Date:   Tue Jul 21 19:33:17 2020 +0000
+
+    fix eslint config to only check local vars for no-unused-vars
+
+[33mcommit 592eb5cae8c83a35543d34c74cbd23699c23056c[m
+Merge: d33374c 9edd134
+Author: John <jespejo@google.com>
+Date:   Tue Jul 21 19:30:14 2020 +0000
+
+    Merge branch 'INIT' of https://github.com/googleinterns/step171-2020 into INIT
+
+[33mcommit 3d87305d8e05f7cb2a11c36f866e4ef42333c9a9[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Tue Jul 21 19:24:48 2020 +0000
+
+    Separate Main Hub from index.html, which will be used as a login page.
+
+[33mcommit 8f5ff89394bc24741a01ee4ffe43eb0c5dbe79a4[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Tue Jul 21 19:03:41 2020 +0000
+
+    Fix code format.
+
+[33mcommit fb30c9e2aed93c62034b5324f4dd3fe55d45a7d0[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Tue Jul 21 19:01:52 2020 +0000
+
+    Fix code format.
+
+[33mcommit b9192e9e7b199994d56e1bf8c2631250cc0c65a2[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Tue Jul 21 18:50:09 2020 +0000
+
+    Add some css style, mainly for buttons.
+
+[33mcommit 698a0f7f19dec0f1e917bac7ed4b29c36f74d51d[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Tue Jul 21 18:39:16 2020 +0000
+
+    Make buttons for admins, tasks, and members on the Project Page.
+
+[33mcommit 5287fa2d2eaadacbf2a7c0223e3946e80785331e[m
+Author: Godsfavour <g5simon@stanford.edu>
+Date:   Tue Jul 21 17:43:32 2020 +0000
+
+    update readme
+
+[33mcommit 8fce6f1222dc6520f6832a8bc1f9ea6051ea084d[m
+Merge: fa0c4c0 6e4ab0d
+Author: Tzirliya <46089063+Tzirliya@users.noreply.github.com>
+Date:   Tue Jul 21 13:06:42 2020 -0400
+
+    Merge pull request #8 from googleinterns/TZIRLIYA_DEVELOPMENT
+    
+    Tzirliya development
+
+[33mcommit 6e4ab0d5694f8c6958923c9adcfc2119f58e580e[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Tue Jul 21 15:03:07 2020 +0000
+
+    Fix code format.
+
+[33mcommit 4f86827acb074545cb6c4c8c44f75be42d1abb6b[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Tue Jul 21 14:57:04 2020 +0000
+
+    Create basic Project Page.
+
+[33mcommit c7445d8b9d2e1cb4d833fc921f07afefb7aa0435[m
+Author: Tal <tal.g.sternberg.23@dartmouth.edu>
+Date:   Tue Jul 21 14:45:12 2020 +0000
+
+    create UserProfile page
+
+[33mcommit c4f6700c92be9c58a363cafdff94f5c38088a29c[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Tue Jul 21 14:26:59 2020 +0000
+
+    test
+
+[33mcommit 7756716b1cd71fab456c1fac7a0cca9163303c01[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Tue Jul 21 14:25:09 2020 +0000
+
+    test
+
+[33mcommit c180f1f2a35f02edcb3a6e4ac8f113bc84873e1c[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Tue Jul 21 13:59:46 2020 +0000
+
+    Delete file that's trying to trigger linters.
+
+[33mcommit 97cc16a0b352ba760e62a60c195dfb6f22c88176[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Tue Jul 21 13:54:50 2020 +0000
+
+    Try to trigger linters.
+
+[33mcommit fb842345e35898b5b31fbe3284b8f6e7c38f4af5[m
+Author: Tzirliya <tzirliya@yahoo.com>
+Date:   Tue Jul 21 13:34:16 2020 +0000
+
+    Try to trigger linters.
+
+[33mcommit fa0c4c0a456dbfedf606260760d974b06796262d[m
+Author: jcespejo <67278840+jcespejo@users.noreply.github.com>
+Date:   Mon Jul 20 18:16:13 2020 -0400
+
+    Delete index.html
+
+[33mcommit d33374c5c91381b0ba548837a61cf0cd74d4c7a7[m
+Author: John <jespejo@google.com>
+Date:   Mon Jul 20 21:48:53 2020 +0000
+
+    Add bad.js
+
+[33mcommit 9edd134f7ba781ac084b2e3c001b2ff7b2a26807[m
+Author: John <jespejo@google.com>
+Date:   Mon Jul 20 21:48:53 2020 +0000
+
+    Add bad.js
+
+[33mcommit a33e611695eed0d1af2c495ec96894f429733017[m
+Merge: 96f93f1 9a30670
+Author: jcespejo <67278840+jcespejo@users.noreply.github.com>
+Date:   Mon Jul 20 17:44:07 2020 -0400
+
+    Merge pull request #3 from googleinterns/INIT
+    
+    Init linters
+
+[33mcommit 9a30670c35066422a3a2f43f237898af1f84074b[m
+Author: John <jespejo@google.com>
+Date:   Mon Jul 20 21:43:05 2020 +0000
+
+    Setup linters
+
+[33mcommit 2fc3f4a535d7d3c5bc2d6e5b86cb3cef080cf21a[m
+Author: John <jespejo@google.com>
+Date:   Mon Jul 20 21:42:01 2020 +0000
+
+    Setup linters
+
+[33mcommit 96f93f1b08f37a6609f7a12ccaac29118164bc39[m
+Merge: 6c70ea0 21f9da7
+Author: jcespejo <67278840+jcespejo@users.noreply.github.com>
+Date:   Mon Jul 20 17:32:52 2020 -0400
+
+    Merge pull request #2 from googleinterns/INIT
+    
+    Add gitignore
+
+[33mcommit 21f9da7d3f4de8337853b385903885a2ef58a38e[m
+Author: John <jespejo@google.com>
+Date:   Mon Jul 20 21:31:07 2020 +0000
+
+    Add gitignore
+
+[33mcommit 6c70ea0c90ea5180c2dd48b7a614bd422dfcea48[m
+Merge: 7b24bda dd562bf
+Author: jcespejo <67278840+jcespejo@users.noreply.github.com>
+Date:   Mon Jul 20 16:47:30 2020 -0400
+
+    Merge pull request #1 from googleinterns/INIT
+    
+    Initial push
+
+[33mcommit dd562bf46d989a5407d60e54bc2fadf3d4ecac41[m
+Author: John <jespejo@google.com>
+Date:   Mon Jul 20 20:35:53 2020 +0000
+
+    Initial push
+
+[33mcommit 7b24bda149687648fd186b411c86aaed93b343b0[m
+Author: John <jespejo@google.com>
+Date:   Mon Jul 20 20:11:38 2020 +0000
+
+    Add README.md
