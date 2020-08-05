@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 public class DisplayProjectsServlet extends HttpServlet {
 
   @Override
-  public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+  public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
     DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
     ProjectController projectController = new ProjectController(datastore);
 
@@ -25,18 +25,7 @@ public class DisplayProjectsServlet extends HttpServlet {
     Long userId = 2l;
 
     // Get the query from request parameter
-    ArrayList<ProjectData> userProjects = new ArrayList<ProjectData>();
-    switch (request.getParameter("query")) { // isIn, isAdmin, isCreator, etc.
-      case "isCreator":
-        userProjects = projectController.getProjectsByCreator(userId);
-        break;
-      case "isAdmin":
-        userProjects = projectController.getProjectsWithAdmin(userId);
-        break;
-      case "isIn":
-        userProjects = projectController.getProjectsWithUser(userId);
-        break;
-    }
+    ArrayList<ProjectData> userProjects = projectController.getProjectsWithUser(userId);
 
     // Use project names for now to represent each project on home page
     ArrayList<String> projectNames = new ArrayList<String>();

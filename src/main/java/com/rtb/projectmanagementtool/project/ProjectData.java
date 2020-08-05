@@ -5,8 +5,10 @@
 package com.rtb.projectmanagementtool.project;
 
 import com.google.appengine.api.datastore.Entity;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
 
 public class ProjectData {
   private final String PROPERTY_NAME = "name";
@@ -78,13 +80,16 @@ public class ProjectData {
       return;
     }
 
-    for (Long id : (HashSet<Long>) entityProperty) {
+    Collection collection = (Collection) entityProperty;
+    Iterator<Long> iterator = collection.iterator();
+
+    while (iterator.hasNext()) {
       if (propertyName.equals(PROPERTY_ADMINS)) {
-        addUser(UserProjectRole.ADMIN, id);
+        addUser(UserProjectRole.ADMIN, iterator.next());
       } else if (propertyName.equals(PROPERTY_MEMBERS)) {
-        addUser(UserProjectRole.MEMBER, id);
+        addUser(UserProjectRole.MEMBER, iterator.next());
       } else if (propertyName.equals(PROPERTY_TASKS)) {
-        addTask(id);
+        addTask(iterator.next());
       }
     }
   }
