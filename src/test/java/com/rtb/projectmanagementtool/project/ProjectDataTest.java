@@ -115,7 +115,7 @@ public class ProjectDataTest {
     // Create project and call toEntity()
     ProjectData project = new ProjectData(PROJECT1_NAME, PROJECT1_DESC, USER2);
     Entity entity = project.toEntity();
-    
+
     Assert.assertEquals(
         "name is correct in entity", PROJECT1_NAME, (String) entity.getProperty(PROPERTY_NAME));
     Assert.assertEquals(
