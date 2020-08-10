@@ -6,7 +6,6 @@ import com.google.appengine.api.datastore.dev.LocalDatastoreService;
 import com.google.appengine.tools.development.testing.LocalDatastoreServiceTestConfig;
 import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
 import com.google.gson.Gson;
-// import com.rtb.projectmanagementtool.auth.*;
 import com.rtb.projectmanagementtool.project.*;
 import com.rtb.projectmanagementtool.task.*;
 import com.rtb.projectmanagementtool.user.*;
@@ -19,6 +18,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.*;
+// import com.rtb.projectmanagementtool.auth.*;
 
 public class HomePageServletTest extends Mockito {
   private HttpServletRequest request;
