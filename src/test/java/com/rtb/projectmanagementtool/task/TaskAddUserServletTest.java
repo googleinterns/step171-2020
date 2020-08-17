@@ -78,7 +78,7 @@ public class TaskAddUserServletTest extends Mockito {
 
     // When parameters are requested, return test values
     long user = 1l;
-    when(request.getParameter("taskID")).thenReturn(Long.toString(task.getTaskID()));
+    when(request.getParameter("id")).thenReturn(Long.toString(task.getTaskID()));
     when(request.getParameter("userID")).thenReturn(Long.toString(user));
 
     // Assert usersBefore is the correct length

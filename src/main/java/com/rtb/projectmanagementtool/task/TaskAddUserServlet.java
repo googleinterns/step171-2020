@@ -25,13 +25,13 @@ public class TaskAddUserServlet extends HttpServlet {
   @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
     // Get parameters
-    long taskID = Long.parseLong(request.getParameter("taskID"));
+    long taskID = Long.parseLong(request.getParameter("id"));
     long userID = Long.parseLong(request.getParameter("userID"));
 
     // Add user to task
     TaskController taskController = new TaskController(datastore);
     taskController.addUser(taskID, userID);
 
-    response.sendRedirect("/task?taskID=" + taskID);
+    response.sendRedirect("/task?id=" + taskID);
   }
 }

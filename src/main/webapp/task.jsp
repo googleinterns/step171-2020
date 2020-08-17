@@ -2,6 +2,7 @@
 <%@ page import="com.google.gson.Gson" %>
 <%@ page import="com.rtb.projectmanagementtool.project.*"%>
 <%@ page import="com.rtb.projectmanagementtool.task.*"%>
+<%@ page import="com.rtb.projectmanagementtool.user.*"%>
 <%@ page import="java.util.ArrayList" %>
 
 <%--Get variables--%>
@@ -10,6 +11,7 @@
     TaskData parentTask = (TaskData) request.getAttribute("parentTask");
     ProjectData project = (ProjectData) request.getAttribute("project");
     ArrayList<TaskData> subtasks = (ArrayList<TaskData>) request.getAttribute("subtasks");
+    ArrayList<UserData> users = (ArrayList<UserData>) request.getAttribute("users");
 %>
 
     <!-- ArrayList<UserData> users = (ArrayList<UserData>) request.getAttribute("users"); -->
@@ -85,7 +87,12 @@
           <input type="hidden" name="userID" value="<%=userID%>"/>
           <button type="submit" id="toggle-user-assignment"><%=buttonText%></button>
         </form>
-      <div id="task-users-container"></div>
+        
+      <div id="task-users-container">
+        <%for (UserData user : users) {%>
+          <p>- <%=user.getUserName()%></p>
+        <%}%>
+      </div>
 
       <h2>Comments</h2>
       <ul id="task-comments-container">

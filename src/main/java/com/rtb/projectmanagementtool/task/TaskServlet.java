@@ -31,19 +31,11 @@ public class TaskServlet extends HttpServlet {
   public void doGet(HttpServletRequest request, HttpServletResponse response)
       throws ServletException, IOException {
 
-    // Temporary/Default task to display
-    long taskID1 = 1l;
-    long projectID1 = 1l;
-    String name1 = "Task 1";
-    String description1 = "Task 1 description...";
-    TaskData task = new TaskData(projectID1, name1, description1);
-
     // Get Task
-    long taskID = Long.parseLong(request.getParameter("taskID"));
+    long taskID = Long.parseLong(request.getParameter("id"));
     TaskController taskController = new TaskController(datastore);
-    if (taskID != 0 && taskID != 1) {
-      task = taskController.getTaskByID(taskID);
-    }
+    TaskData task = taskController.getTaskByID(taskID);
+
     // // ArrayList is for HashMap below. Is there a better way to do this?
     // ArrayList<TaskData> taskInArrayList = new ArrayList<>(Arrays.asList(task));
 

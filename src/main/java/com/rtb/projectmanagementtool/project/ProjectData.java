@@ -10,8 +10,6 @@ import java.util.Collection;
 import java.util.HashSet;
 
 public class ProjectData {
-  //  Previously removed constants because they would appear in Json
-  // created by gson.toJson(), but making them static fixed that
   private static final String PROPERTY_NAME = "name";
   private static final String PROPERTY_CREATOR = "creator";
   private static final String PROPERTY_DESCRIPTION = "description";
