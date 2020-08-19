@@ -33,6 +33,7 @@
       
       <div id="project-users-container">
         <h2>Users</h2>
+        <a href="user-profile?userID=<%=creator.getUserID()%>">
         <p>Creator: 
             <%if (userId == creator.getUserID()) { %> 
               <mark>
@@ -42,7 +43,9 @@
               </mark>
             <% } %>
         </p>
+        </a>
         <%for (UserData user : admins) {%>
+        <a href="user-profile?userID=<%=user.getUserID()%>">
           <p>Admin: 
             <%if (userId == user.getUserID()) { %> 
               <mark>
@@ -52,8 +55,10 @@
               </mark>
             <% } %>
           </p>
+        </a>
         <%}%>
         <%for (UserData user : members) {%>
+        <a href="user-profile?userID=<%=user.getUserID()%>">
           <p>Member: 
             <%if (userId == user.getUserID()) { %> 
               <mark>
@@ -63,6 +68,7 @@
               </mark>
             <% } %>
           </p>
+        </a>
         <%}%>
         
         <% if (project.isCreator(userId) || project.hasAdmin(userId)) { %>

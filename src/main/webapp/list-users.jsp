@@ -14,11 +14,13 @@
 <ul>
   <%for (UserData user : users) {%>
     <li class="user inline">
-      <button type="button" class = "flat-button" onclick="location.href='user-profile'">
+      <a href="user-profile?userID=<%=user.getUserID()%>">
+      <button type="button" class = "flat-button">
         <h3><%=user.getUserName()%></h3>
         <p>Major: <%=user.getUserMajors()%></p>
         <p>Graduation Year: <%=user.getUserYear()%></p>
       </button>
+      </a>
     </li>
   <%}%>
 </ul>

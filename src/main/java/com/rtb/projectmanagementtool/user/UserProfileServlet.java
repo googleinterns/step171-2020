@@ -32,8 +32,6 @@ public class UserProfileServlet extends HttpServlet {
     AuthOps auth = new AuthOps(datastore);
 
     // Authenticate
-    // shouldn't need this line
-    // auth.loginUser(request, response);
     Long userLoggedInId = auth.whichUserIsLoggedIn(request, response);
     if (userLoggedInId == Long.parseLong(AuthOps.NO_LOGGED_IN_USER)) {
       // If no user found, redirect to create user servlet
@@ -64,6 +62,7 @@ public class UserProfileServlet extends HttpServlet {
     // Set attributes of request; retrieve in jsp with
     request.setAttribute("UserData", user);
     request.setAttribute("UserTasks", tasks);
+    request.setAttribute("userLoggedIn", userLoggedInId);
 
     // Load jsp for user page
     request.getRequestDispatcher("user_profile.jsp").forward(request, response);

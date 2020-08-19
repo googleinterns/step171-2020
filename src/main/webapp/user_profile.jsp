@@ -4,6 +4,7 @@
 
 <%--Get variables--%>
 <%
+    long userLoggedIn = (long) request.getAttribute("userLoggedIn");
     UserData user = (UserData) request.getAttribute("UserData");
     ArrayList<TaskData> userTasks = (ArrayList<TaskData>) request.getAttribute("UserTasks");
 %>
@@ -32,11 +33,13 @@
        <div id="user-total-tasks-container">
           <p>Total Completed Tasks: <%=user.getUserTotal()%></p>
       </div>
+      <% if (userLoggedIn == user.getUserID()) { %>
       <div id="task-subtasks-container">
         <h2><%=user.getUserName()%>'s Tasks:</h2>
         <%request.setAttribute("tasks", userTasks);%>
         <jsp:include page="list-tasks.jsp"/>
       </div>
+      <% } %>
     </div>
   </body>
 </html>
