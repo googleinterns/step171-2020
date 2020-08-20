@@ -25,8 +25,16 @@ public class LoginServlet extends HttpServlet {
       return;
     }
 
+    // if user successfully logged in but isn't in database, redirect to create user page
+    // 'do' param indicates that /login was called after a user a user logged in with Google
+    if (request.getParameterMap().containsKey("do") 
+        && auth.loginUser(request, response) == Long.parseLong(AuthOps.NO_LOGGED_IN_USER)) {
+      response.sendRedirect("/create-user");
+      return;
+    }
+
     // Get login URL
-    request.setAttribute("loginUrl", auth.getLoginLink(/*Return URL*/ "/login-dispatch"));
+    request.setAttribute("loginUrl", auth.getLoginLink(/*Return URL*/ "/login?do"));
 
     // Forward to login page
     request.getRequestDispatcher("login.jsp").forward(request, response);
