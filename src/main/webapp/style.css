@@ -190,11 +190,7 @@ ul {
   background-color: #111;
 }
 
-#project-container button {
-  width: 200px;
-  height: 150px;
-}
-
+/* Style Modals */
 #add-user-to-project-modal, 
 #message-modal {
   width: 100%;
@@ -229,5 +225,32 @@ ul {
   font-size: 20px;
   font-weight: bold;
   cursor: pointer;
+}
+
+/* Style Home Page */
+.project-container {
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 50%;
+}
+
+.project-box {
+  margin: 10px 10px;
+  transition: transform 300ms;
+}
+.project-box:hover {
+  transform: scale(1.1);
+}
+.project-box-content {
+  color: white;
+  background-color: #4285F4;
+  border-radius: 5px;
+  width: 200px;
+  height: 150px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
