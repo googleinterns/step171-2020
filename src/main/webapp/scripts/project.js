@@ -51,7 +51,7 @@ function addUserToProject(projectId) {
 
   // Generate query string & use it t call the servlet
   var queryString = '/add-user-to-project?project=' + projectId + '&userEmail=' + userEmail + '&userRole=' + userRole;
-  fetch(queryString).then(response => response.json()).then((response) => {
+  fetch(queryString, {method: "POST"}).then(response => response.json()).then((response) => {
     if (response.hasOwnProperty('userId') && response.hasOwnProperty('userName')) {
       addUserToProjectPage(response.userName, userRole, response.userId);
     }

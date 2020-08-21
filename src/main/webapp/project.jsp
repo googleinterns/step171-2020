@@ -75,15 +75,15 @@
       
       <!-- Display users -->
       <div class="project-section users">
-        <% if (project.hasAdmin(userId) || project.isOwner(userId)) { %>
+        <% if (project.hasAdmin(userId) || project.isCreator(userId)) { %>
         <button id="add-user-button">add user</button>
         <% } %>
-        <p>(creator) <%=creator.getUserName()%></p>
+        <p>creator: <%=creator.getUserName()%></p>
         <% for (UserData user : admins) { %>
-        <p>(admin) <%=user.getUserName()%></p>
+        <p>admin: <%=user.getUserName()%></p>
         <% } %>
         <% for (UserData user : members) { %>
-        <p>(member) <%=user.getUserName()%></p>
+        <p>member: <%=user.getUserName()%></p>
         <% } %>
       </div>
     </div>
