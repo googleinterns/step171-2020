@@ -24,12 +24,12 @@ public class AddUserToProjectServlet extends HttpServlet {
 
     // get request parameters
     Long projectId = Long.parseLong(request.getParameter("project"));
-    String userName = request.getParameter("userName");
+    String userEmail = request.getParameter("userEmail");
     String userRole = request.getParameter("userRole");
 
     // create objects
     ProjectData project = projectController.getProjectById(projectId);
-    UserData user = userController.getUserByName(userName);
+    UserData user = userController.getUserByEmail(userEmail);
 
     // if user is not in database or they are already in the project,
     // redirect back to project page
@@ -66,15 +66,19 @@ public class AddUserToProjectServlet extends HttpServlet {
         .println(
             generateResponse(
                 /*message*/ user.getUserName() + " successfully added to project",
+                user.getUserName(),
                 user.getUserID()));
   }
 
   // Method generates a json for servlet response
-  public String generateResponse(String message, Long userId) {
+  public String generateResponse(String message, String userName, Long userId) {
     String response = "{";
     response += "\"message\": ";
     response += "\"" + message + "\"";
-    if (userId != null) {
+    if (userId != null && userName != null) {
+      response += ", ";
+      response += "\"userName\": ";
+      response += "\"" + userName + "\"";
       response += ", ";
       response += "\"userId\": ";
       response += "\"" + userId + "\"";
@@ -85,6 +89,6 @@ public class AddUserToProjectServlet extends HttpServlet {
 
   // Method generates a json for servlet response
   public String generateResponseForFailedOperation(String message) {
-    return generateResponse(message, /*userId*/ null);
+    return generateResponse(message, /*userName*/ null, /*userId*/ null);
   }
 }

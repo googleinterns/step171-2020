@@ -12,11 +12,11 @@
       <input type="hidden" name="projectId" value=<%=project.getId()%>>
       <div>
         <label>Email</label>
-        <input type="text" id="user-name" name="user-name" placeholder="User email" /> 
+        <input title="Enter the email of user to add" type="text" id="user-email" name="user-email" placeholder="User email" /> 
       </div>
       <div>
         <label>Role</label>
-        <select id="user-role" name="user-role" class="field-select">
+        <select title="Select the role to add user as" id="user-role" name="user-role" class="field-select">
           <% if (project.isCreator(userId)) { %>
           <option value="admin">admin</option>
           <% } %>

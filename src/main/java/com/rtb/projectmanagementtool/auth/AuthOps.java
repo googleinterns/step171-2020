@@ -43,8 +43,12 @@ public class AuthOps {
   // only call after Auth
   public String getAuthID() {
     UserService userService = UserServiceFactory.getUserService();
-    String AuthID = userService.getCurrentUser().getUserId();
-    return AuthID;
+    return userService.getCurrentUser().getUserId();
+  }
+
+  public String getEmail() {
+    UserService userService = UserServiceFactory.getUserService();
+    return userService.getCurrentUser().getEmail();
   }
 
   // get/create cookie and set value to userID
