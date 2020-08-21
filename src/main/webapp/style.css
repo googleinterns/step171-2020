@@ -55,40 +55,32 @@ form {
   background-color: aliceblue;
 }
 
+
 /* Status checkmarks */
+
 .unchecked {
   color: white;
-  text-shadow:
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   transition: 0.5s;
 }
 
 .checked {
   color: green;
-  text-shadow:
-    -1px -1px 0 green,
-    1px -1px 0 green,
-    -1px 1px 0 green,
-    1px 1px 0 green;
+  text-shadow: -1px -1px 0 green, 1px -1px 0 green, -1px 1px 0 green, 1px 1px 0 green;
   transition: 0.5s;
 }
 
 .unavailable {
-  text-shadow:
-    -1px -1px 0 gray,
-    1px -1px 0 gray,
-    -1px 1px 0 gray,
-    1px 1px 0 gray;
+  text-shadow: -1px -1px 0 gray, 1px -1px 0 gray, -1px 1px 0 gray, 1px 1px 0 gray;
 }
 
 .checked.unavailable {
   color: gray;
 }
 
+
 /* Hover message */
+
 .has-hover-text {
   position: relative;
   display: inline-block;
@@ -136,6 +128,7 @@ form {
   width: 60px;
   margin-left: -30px;
 }
+
 
 /* Add comments form */
 
@@ -199,12 +192,15 @@ textarea:focus {
   padding: 10px;
 }
 
+
 /* Checkmark button */
+
 .checkmark-button {
   background: transparent;
   border: none;
   outline: none;
 }
+
 
 /* Deep buttons */
 
@@ -233,9 +229,7 @@ textarea:focus {
 }
 
 
-
 /* Flat buttons */
-
 
 
 /*
@@ -264,7 +258,9 @@ textarea:focus {
 }
 */
 
+
 /* Flat buttons */
+
 .flat-button {
   text-align: center;
   font-size: 18px;
