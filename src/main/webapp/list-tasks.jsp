@@ -1,8 +1,5 @@
 <%--Class Imports--%>
-<%@ page import="com.google.gson.Gson"%>
 <%@ page import="com.rtb.projectmanagementtool.task.*"%>
-<%@ page import="java.util.ArrayList"%>
-<%@ page import="java.util.Arrays"%>
 <%@ page import="java.util.List"%>
 
 <%--Get variables--%>
@@ -17,6 +14,9 @@
       <button type="button" class="inline deep-button" onclick="location.href='task?taskID=<%=task.getTaskID()%>'">
         <%=task.getName()%>
       </button>
+      <%request.setAttribute("task", task);%>
+      <%request.setAttribute("clickable", false);%>
+      <jsp:include page="task-status-checkmark.jsp"/>
       <p class="inline"><%=task.getDescription()%></p>
     </li>
   <%}%>

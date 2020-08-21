@@ -54,8 +54,8 @@ public class TaskServlet extends HttpServlet {
     TaskData task = new TaskData(projectID1, name1, description1);
 
     // Get Task
-    long taskID;
     TaskController taskController = new TaskController(datastore);
+    long taskID;
     try {
       taskID = Long.parseLong(request.getParameter("taskID"));
       task = taskController.getTaskByID(taskID);
@@ -63,11 +63,12 @@ public class TaskServlet extends HttpServlet {
       taskID = 0l;
     }
 
-    // Get Parent Task
-    TaskData parentTask = null;
-    if (taskID != 0 && task.getParentTaskID() != 0) {
-      parentTask = taskController.getTaskByID(task.getParentTaskID());
-    }
+    // Get ancestors
+    ArrayList<TaskData> ancestors = taskController.getAncestors(task);
+
+    // Get Task Status options
+    boolean canSetComplete = taskController.allSubtasksAreComplete(task);
+    boolean canSetIncomplete = !taskController.parentTaskIsComplete(task);
 
     // Get Parent Project
     ProjectController projectController = new ProjectController(datastore);
@@ -91,13 +92,16 @@ public class TaskServlet extends HttpServlet {
     }
 
     // Get Comments
-    // int quantity = Integer.parseInt(request.getParameter("quantity"));
+    // int limit = Integer.parseInt(request.getParameter("limit"));
     // String sortBy = request.getParameter("sortBy");
     // String sortDirection = request.getParameter("sortDirection");
+    int limit = Integer.MAX_VALUE;
+    String sortBy = "timestamp";
+    String sortDirection = "descending";
     CommentController commentController = new CommentController(datastore);
     ArrayList<CommentData> comments = new ArrayList<>();
     try {
-      comments = commentController.getCommentsByTaskID(taskID);
+      comments = commentController.getComments(taskID, limit, sortBy, sortDirection);
     } catch (NullPointerException | IllegalArgumentException e) {
       System.out.println("TaskID doesn't exist. Cannot fetch comments.");
     }
@@ -115,7 +119,9 @@ public class TaskServlet extends HttpServlet {
     // Send data to task.jsp
     request.setAttribute("user", user);
     request.setAttribute("task", task);
-    request.setAttribute("parentTask", parentTask);
+    request.setAttribute("ancestors", ancestors);
+    request.setAttribute("canSetComplete", canSetComplete);
+    request.setAttribute("canSetIncomplete", canSetIncomplete);
     request.setAttribute("project", project);
     request.setAttribute("subtasks", subtasks);
     request.setAttribute("users", users);

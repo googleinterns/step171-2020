@@ -1,69 +1,53 @@
-package com.rtb.projectmanagementtool.comment;
+package com.rtb.projectmanagementtool.privatecomment;
 
 import com.google.appengine.api.datastore.Entity;
 import java.util.Date;
 
-/** Class containing comments. */
-public final class CommentData implements Comparable<CommentData> {
+/** Class containing private comments. */
+public final class PrivateCommentData implements Comparable<PrivateCommentData> {
 
   private long commentID;
   private long taskID;
   private long userID;
-  private String title;
   private String message;
   private Date timestamp;
-  private boolean isEdited;
 
-  public CommentData(
-      long commentID,
-      long taskID,
-      long userID,
-      String title,
-      String message,
-      Date timestamp,
-      boolean isEdited) {
+  public PrivateCommentData(
+      long commentID, long taskID, long userID, String message, Date timestamp) {
     this.commentID = commentID;
     this.taskID = taskID;
     this.userID = userID;
-    this.title = title;
     this.message = message;
     this.timestamp = timestamp;
-    this.isEdited = isEdited;
   }
 
-  public CommentData(long taskID, long userID, String title, String message) {
+  public PrivateCommentData(long taskID, long userID, String message) {
     this.commentID = 0;
     this.taskID = taskID;
     this.userID = userID;
-    this.title = title;
     this.message = message;
     this.timestamp = new Date();
-    this.isEdited = false;
   }
 
-  public CommentData(Entity entity) {
+  public PrivateCommentData(Entity entity) {
     commentID = entity.getKey().getId();
     taskID = (long) entity.getProperty("taskID");
     userID = (long) entity.getProperty("userID");
-    title = (String) entity.getProperty("title");
     message = (String) entity.getProperty("message");
     timestamp = (Date) entity.getProperty("timestamp");
-    isEdited = (boolean) entity.getProperty("isEdited");
   }
 
   public Entity toEntity() {
     Entity entity;
     if (commentID != 0) {
-      entity = new Entity("Comment", commentID);
+      entity = new Entity("PrivateComment", commentID);
     } else {
-      entity = new Entity("Comment");
+      entity = new Entity("PrivateComment");
     }
     entity.setProperty("taskID", taskID);
     entity.setProperty("userID", userID);
-    entity.setProperty("title", title);
     entity.setProperty("message", message);
     entity.setProperty("timestamp", timestamp);
-    entity.setProperty("isEdited", isEdited);
     return entity;
   }
 
@@ -79,20 +63,12 @@ public final class CommentData implements Comparable<CommentData> {
     return userID;
   }
 
-  public String getTitle() {
-    return title;
-  }
-
   public String getMessage() {
     return message;
   }
 
   public Date getTimestamp() {
     return timestamp;
-  }
-
-  public boolean getIsEdited() {
-    return isEdited;
   }
 
   public void setCommentID(long commentID) {
@@ -107,10 +83,6 @@ public final class CommentData implements Comparable<CommentData> {
     this.userID = userID;
   }
 
-  public void setTitle(String title) {
-    this.title = title;
-  }
-
   public void setMessage(String message) {
     this.message = message;
   }
@@ -119,41 +91,33 @@ public final class CommentData implements Comparable<CommentData> {
     this.timestamp = timestamp;
   }
 
-  public void setIsEdited(boolean isEdited) {
-    this.isEdited = isEdited;
-  }
-
   @Override
-  public int compareTo(CommentData comment) {
-    long dif = this.commentID - comment.commentID;
+  public int compareTo(PrivateCommentData privateComment) {
+    long dif = this.commentID - privateComment.commentID;
     return (int) dif;
   }
 
   @Override
   public String toString() {
     String returnString = "{\n";
-    returnString += "Comment ID: " + commentID + "\n";
+    returnString += "Private Comment ID: " + commentID + "\n";
     returnString += "Task ID: " + taskID + "\n";
     returnString += "User ID: " + userID + "\n";
-    returnString += "Title: " + title + "\n";
     returnString += "Message: " + message + "\n";
-    returnString += "Date: " + timestamp + "\n";
-    returnString += "Is Edited: " + isEdited + "\n}";
+    returnString += "Date: " + timestamp + "\n}";
     return returnString;
   }
 
-  private boolean equals(CommentData a, CommentData b) {
+  private boolean equals(PrivateCommentData a, PrivateCommentData b) {
     return a.commentID == b.commentID
         && a.taskID == b.taskID
         && a.userID == b.userID
-        && a.title.equals(b.title)
         && a.message.equals(b.message)
-        && a.timestamp.equals(b.timestamp)
-        && a.isEdited == b.isEdited;
+        && a.timestamp.equals(b.timestamp);
   }
 
   @Override
   public boolean equals(Object other) {
-    return other instanceof CommentData && equals(this, (CommentData) other);
+    return other instanceof PrivateCommentData && equals(this, (PrivateCommentData) other);
   }
 }

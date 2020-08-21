@@ -6,6 +6,7 @@ import com.rtb.projectmanagementtool.task.TaskData.Status;
 import com.rtb.projectmanagementtool.user.*;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 /** Class controlling the TaskData object. */
@@ -85,7 +86,7 @@ public final class TaskController {
     return true;
   }
 
-  private boolean allSubtasksAreComplete(TaskData task) {
+  public boolean allSubtasksAreComplete(TaskData task) {
     ArrayList<TaskData> subtasks = getSubtasks(task);
     for (TaskData subtask : subtasks) {
       if (subtask.getStatus() != Status.COMPLETE) {
@@ -131,8 +132,7 @@ public final class TaskController {
   }
 
   public boolean setIncomplete(TaskData task) {
-    Long parentTaskID = task.getParentTaskID();
-    if (parentTaskID != 0 && getTaskByID(parentTaskID).getStatus() == Status.COMPLETE) {
+    if (parentTaskIsComplete(task)) {
       return false;
     }
     if (task.getStatus() != Status.INCOMPLETE) {
@@ -164,6 +164,11 @@ public final class TaskController {
       }
     }
     return true;
+  }
+
+  public boolean parentTaskIsComplete(TaskData task) {
+    Long parentTaskID = task.getParentTaskID();
+    return parentTaskID != 0 && getTaskByID(parentTaskID).getStatus() == Status.COMPLETE;
   }
 
   // Get methods
@@ -205,6 +210,18 @@ public final class TaskController {
       return getTasks(filter, NO_QUERY_LIMIT, NO_QUERY_SORT);
     }
     return new ArrayList<>();
+  }
+
+  public ArrayList<TaskData> getAncestors(TaskData task) {
+    ArrayList<TaskData> ancestors = new ArrayList<>();
+    long parentTaskID = task.getParentTaskID();
+    while (parentTaskID != 0) {
+      task = getTaskByID(parentTaskID);
+      ancestors.add(task);
+      parentTaskID = task.getParentTaskID();
+    }
+    Collections.reverse(ancestors);
+    return ancestors;
   }
 
   private ArrayList<TaskData> getTasks(Filter filter, int limit, SortPredicate sort) {

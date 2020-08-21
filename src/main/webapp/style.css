@@ -14,6 +14,10 @@ a {
   text-decoration: none;
 }
 
+form {
+  margin-bottom: 0;
+}
+
 #content {
   background-color: white;
   padding: 10px 30px;
@@ -28,8 +32,19 @@ a {
   text-align: center;
 }
 
+.no-margin {
+  margin: 0;
+}
+
 .task {
   border: 2px solid dodgerblue;
+  background-color: aliceblue;
+}
+
+.description {
+  padding: 20px;
+  border: 2px solid dodgerblue;
+  margin: 40px 100px;
   background-color: aliceblue;
 }
 
@@ -40,6 +55,87 @@ a {
   background-color: aliceblue;
 }
 
+/* Status checkmarks */
+.unchecked {
+  color: white;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+  transition: 0.5s;
+}
+
+.checked {
+  color: green;
+  text-shadow:
+    -1px -1px 0 green,
+    1px -1px 0 green,
+    -1px 1px 0 green,
+    1px 1px 0 green;
+  transition: 0.5s;
+}
+
+.unavailable {
+  text-shadow:
+    -1px -1px 0 gray,
+    1px -1px 0 gray,
+    -1px 1px 0 gray,
+    1px 1px 0 gray;
+}
+
+.checked.unavailable {
+  color: gray;
+}
+
+/* Hover message */
+.has-hover-text {
+  position: relative;
+  display: inline-block;
+}
+
+.hover-text {
+  font-size: 14px;
+  text-shadow: none;
+}
+
+.has-hover-text .hover-text {
+  visibility: hidden;
+  width: 160px;
+  background-color: gray;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.has-hover-text .hover-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: gray transparent transparent transparent;
+}
+
+.has-hover-text:hover .hover-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.has-hover-text .small {
+  width: 60px;
+  margin-left: -30px;
+}
 
 /* Add comments form */
 
@@ -103,6 +199,12 @@ textarea:focus {
   padding: 10px;
 }
 
+/* Checkmark button */
+.checkmark-button {
+  background: transparent;
+  border: none;
+  outline: none;
+}
 
 /* Deep buttons */
 
@@ -131,13 +233,43 @@ textarea:focus {
 }
 
 
+
 /* Flat buttons */
 
-.flat-button {
+
+
+/*
+.unavailable-deep-button {
   text-align: center;
+  color: white;
   font-size: 18px;
   padding: 10px;
   margin: 10px;
+  cursor: pointer;
+  outline: none;
+  background-color: dimgray;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 5px gray;
+}
+
+.unavailable-deep-button:hover {
+  background-color: #333;
+}
+
+.unavailable-deep-button:active {
+  background-color: #333;
+  box-shadow: 0 5px dimgray;
+  transform: translateY(5px);
+}
+*/
+
+/* Flat buttons */
+.flat-button {
+  text-align: center;
+  font-size: 18px;
+  padding: 3px;
+  margin: 3px;
   cursor: pointer;
   outline: none;
   background-color: lightskyblue;
@@ -376,6 +508,3 @@ i {
 .project-section.active {
   display: block;
 }
-
-
-
