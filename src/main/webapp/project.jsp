@@ -21,11 +21,15 @@
     <script defer src="scripts/project.js"></script>
   </head>
   <body>
+    <div class="content">
     <!-- Include navigation bar -->
     <jsp:include page="navigation-bar.jsp" />
 
+    <!-- Include modals -->
+    <jsp:include page="add-user-to-project-modal.jsp" />
+    <jsp:include page="message-modal.jsp" />
+
     <!-- Page content -->
-    <div id="content">
       <div id="project-title-container"><h1><%=project.getName()%></h1></div>
       <div id="project-description-container">
         <p><%=project.getDescription()%></p>
@@ -34,7 +38,7 @@
       <div id="project-users-container">
         <h2>Users</h2>
         <a href="user-profile?userID=<%=creator.getUserID()%>">
-        <p>Creator: 
+        <p>creator: 
             <%if (userId == creator.getUserID()) { %> 
               <mark>
             <% } %>
@@ -46,7 +50,7 @@
         </a>
         <%for (UserData user : admins) {%>
         <a href="user-profile?userID=<%=user.getUserID()%>">
-          <p>Admin: 
+          <p>admin: 
             <%if (userId == user.getUserID()) { %> 
               <mark>
             <% } %>
@@ -59,7 +63,7 @@
         <%}%>
         <%for (UserData user : members) {%>
         <a href="user-profile?userID=<%=user.getUserID()%>">
-          <p>Member: 
+          <p>member: 
             <%if (userId == user.getUserID()) { %> 
               <mark>
             <% } %>
@@ -70,16 +74,10 @@
           </p>
         </a>
         <%}%>
-        
-        <% if (project.isCreator(userId) || project.hasAdmin(userId)) { %>
-          <button id="add-user-button" onclick="showAddUserForm()">Add user</button>
-          <div id="project-add-user-form">
-            <button id="cancel-add-user-button" onclick="hideAddUserForm()">Cancel</button>
-            <jsp:include page="project-add-user-form.jsp" />
-          </div>
-        <% } %>
       </div>
-      
+      <% if (project.isCreator(userId) || project.hasAdmin(userId)) { %>
+          <button id="add-user-button">Add user</button>
+        <% } %>
       <div id="project-tasks-container">
         <h2>Tasks</h2>
         <%request.setAttribute("tasks", tasks);%>
@@ -90,7 +88,6 @@
           Add Task
         </button>
       </div>
-
     </div>
   </body>
 </html>

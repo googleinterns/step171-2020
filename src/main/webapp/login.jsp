@@ -5,12 +5,10 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div id="content">
-      <h1>Login Page</h1>
+    <h1>Login Page</h1>
 
-      <a href="${loginUrl}">
-        <button class="deep-button">Log in with Google</button>
-      </a>
-    </div>
+    <a href="${loginUrl}">
+    <button class="deep-button">Log in with Google</button>
+    </a>
   </body>
 </html>
