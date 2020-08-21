@@ -18,10 +18,10 @@
     <meta charset="UTF-8">
     <title><%=project.getName()%></title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
     <script defer src="scripts/project.js"></script>
   </head>
   <body>
-    <div class="content">
     <!-- Include navigation bar -->
     <jsp:include page="navigation-bar.jsp" />
 
@@ -29,64 +29,62 @@
     <jsp:include page="add-user-to-project-modal.jsp" />
     <jsp:include page="message-modal.jsp" />
 
-    <!-- Page content -->
-      <div id="project-title-container"><h1><%=project.getName()%></h1></div>
-      <div id="project-description-container">
-        <p><%=project.getDescription()%></p>
+    <div class="content">
+      <div class="project-page-top-bar">
+        <div class="project-page-header">
+          <div class="page-header-title-and-actions">
+            <div class="page-header-title">
+              <h1><%=project.getName()%></h1>
+            </div>
+            <div class="page-header-actions-selector" tabindex="100" onfocus="showActions()" onblur="hideActions()">
+              <i id="angle-down" class="fas fa-angle-down"></i>
+              <div class="page-header-actions">
+                <ul>
+                  <li><a href="#"><i class="fas fa-info"></i><p>Toggle description</p></a></li>
+                  <li><a href="#"><i class="fas fa-edit"></i><p>Edit project details</p></a></li>
+                  <li><a href="#"><i class="fas fa-check"></i><p>Complete project</p></a></li>
+                  <li><a href="#"><i class="far fa-trash-alt"></i><p>Delete project</p></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="page-header-nav">
+            <div class="project-header-tab tasks active">
+              <i class="fas fa-tasks"></i>
+              <p>Tasks</p>
+            </div>
+            <div class="project-header-tab users">
+              <i class="fas fa-users"></i>
+              <p>Users</p>
+            </div>
+          </div>
+        </div>
       </div>
-      
-      <div id="project-users-container">
-        <h2>Users</h2>
-        <a href="user-profile?userID=<%=creator.getUserID()%>">
-        <p>creator: 
-            <%if (userId == creator.getUserID()) { %> 
-              <mark>
-            <% } %>
-            <%=creator.getUserName() %>
-            <%if (userId == creator.getUserID()) { %> 
-              </mark>
-            <% } %>
-        </p>
-        </a>
-        <%for (UserData user : admins) {%>
-        <a href="user-profile?userID=<%=user.getUserID()%>">
-          <p>admin: 
-            <%if (userId == user.getUserID()) { %> 
-              <mark>
-            <% } %>
-              <%=user.getUserName() %>
-            <%if (userId == user.getUserID()) { %> 
-              </mark>
-            <% } %>
-          </p>
-        </a>
-        <%}%>
-        <%for (UserData user : members) {%>
-        <a href="user-profile?userID=<%=user.getUserID()%>">
-          <p>member: 
-            <%if (userId == user.getUserID()) { %> 
-              <mark>
-            <% } %>
-              <%=user.getUserName() %>
-            <%if (userId == user.getUserID()) { %> 
-              </mark>
-            <% } %>
-          </p>
-        </a>
-        <%}%>
-      </div>
-      <% if (project.isCreator(userId) || project.hasAdmin(userId)) { %>
-          <button id="add-user-button">Add user</button>
-        <% } %>
-      <div id="project-tasks-container">
-        <h2>Tasks</h2>
+    
+
+    <!-- Display tasks -->
+      <div class="project-section tasks active">
         <%request.setAttribute("tasks", tasks);%>
-        <jsp:include page="list-tasks.jsp"/>
-      </div>
-      <div id="project-addtask-container">
+      <div class="project-addtask-container">
         <button type="button" class="deep-button" onclick="location.href='add-task.jsp?projectID=<%=project.getId()%>&projectName=<%=project.getName()%>&taskID=0&taskName=null'">
           Add Task
         </button>
+      </div>
+      <jsp:include page="list-tasks.jsp"/>
+      </div>
+      
+      <!-- Display users -->
+      <div class="project-section users">
+        <% if (project.hasAdmin(userId) || project.isOwner(userId)) { %>
+        <button id="add-user-button">add user</button>
+        <% } %>
+        <p>(creator) <%=creator.getUserName()%></p>
+        <% for (UserData user : admins) { %>
+        <p>(admin) <%=user.getUserName()%></p>
+        <% } %>
+        <% for (UserData user : members) { %>
+        <p>(member) <%=user.getUserName()%></p>
+        <% } %>
       </div>
     </div>
   </body>
