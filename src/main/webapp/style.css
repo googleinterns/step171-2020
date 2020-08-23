@@ -55,9 +55,7 @@ form {
   background-color: aliceblue;
 }
 
-
 /* Status checkmarks */
-
 .unchecked {
   color: white;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
@@ -78,9 +76,7 @@ form {
   color: gray;
 }
 
-
 /* Hover message */
-
 .has-hover-text {
   position: relative;
   display: inline-block;
@@ -129,9 +125,7 @@ form {
   margin-left: -30px;
 }
 
-
 /* Add comments form */
-
 #task-addcomments-container {
   padding: 30px;
   border: 2px solid dodgerblue;
@@ -164,7 +158,6 @@ textarea:focus {
   border: 3px solid dodgerblue;
 }
 
-
 /* User info */
 
 .user-stats {
@@ -192,7 +185,6 @@ textarea:focus {
   padding: 10px;
 }
 
-
 /* Checkmark button */
 
 .checkmark-button {
@@ -200,7 +192,6 @@ textarea:focus {
   border: none;
   outline: none;
 }
-
 
 /* Deep buttons */
 
@@ -228,9 +219,7 @@ textarea:focus {
   transform: translateY(5px);
 }
 
-
 /* Flat buttons */
-
 
 /*
 .unavailable-deep-button {
@@ -258,7 +247,6 @@ textarea:focus {
 }
 */
 
-
 /* Flat buttons */
 
 .flat-button {
@@ -281,7 +269,6 @@ textarea:focus {
   background-color: dodgerblue;
 }
 
-
 /* status on checklist determines task color */
 
 .incomplete {
@@ -300,13 +287,11 @@ textarea:focus {
   background-color: darkgreen;
 }
 
-
 /* Lists */
 
 ul {
   list-style-type: none;
 }
-
 
 /* Navigation bar */
 
@@ -334,7 +319,6 @@ ul {
   background-color: #111;
 }
 
-
 /* Style Modals */
 
 #add-user-to-project-modal,
@@ -359,7 +343,7 @@ ul {
   position: relative;
 }
 
-.modal-content>* {
+.modal-content > * {
   display: block;
   margin: 10 auto;
 }
@@ -372,7 +356,6 @@ ul {
   font-weight: bold;
   cursor: pointer;
 }
-
 
 /* Style Home Page */
 
@@ -394,7 +377,7 @@ ul {
 
 .project-box-content {
   color: white;
-  background-color: #4285F4;
+  background-color: #4285f4;
   border-radius: 5px;
   width: 200px;
   height: 150px;
@@ -491,7 +474,7 @@ i {
 }
 
 .project-header-tab.active {
-  background-color: #4285F4;
+  background-color: #4285f4;
   color: white;
 }
 
