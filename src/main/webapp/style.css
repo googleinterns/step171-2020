@@ -6,6 +6,10 @@
   width: auto;
 }
 
+i {
+  font-size: 12px;
+}
+
 button {
   cursor: pointer;
 }
@@ -293,32 +297,6 @@ ul {
   list-style-type: none;
 }
 
-/* Navigation bar */
-
-#navigation ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-}
-
-#navigation li {
-  float: left;
-}
-
-#navigation a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-#navigation a:hover {
-  background-color: #111;
-}
-
 /* Style Modals */
 
 #add-user-to-project-modal,
@@ -457,10 +435,6 @@ ul {
   transition: background 0.4s linear;
 }
 
-i {
-  font-size: 12px;
-}
-
 .project-header-tab p {
   font-weight: bold;
   overflow: hidden;
@@ -486,4 +460,30 @@ i {
 
 .project-section.active {
   display: block;
+}
+
+/* Navigation bar */
+
+#navigation ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+#navigation li {
+  float: left;
+}
+
+#navigation a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+#navigation a:hover {
+  background-color: #111;
 }

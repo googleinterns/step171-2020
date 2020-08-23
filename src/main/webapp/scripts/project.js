@@ -60,7 +60,7 @@ function addUserToProject(projectId) {
   '&userEmail=' + userEmail + '&userRole=' + userRole;
   fetch(queryString, {method: 'POST'}).then((response) =>
     response.json()).then((response) => {
-    if (response.hasOwnProperty('userId') && 
+    if (response.hasOwnProperty('userId') &&
     response.hasOwnProperty('userName')) {
       addUserToProjectPage(response.userName, userRole, response.userId);
     }
