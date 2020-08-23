@@ -40,10 +40,10 @@
               <i id="angle-down" class="fas fa-angle-down"></i>
               <div class="page-header-actions">
                 <ul>
-                  <li><a href="#"><i class="fas fa-info"></i><p>Toggle description</p></a></li>
-                  <li><a href="#"><i class="fas fa-edit"></i><p>Edit project details</p></a></li>
-                  <li><a href="#"><i class="fas fa-check"></i><p>Complete project</p></a></li>
-                  <li><a href="#"><i class="far fa-trash-alt"></i><p>Delete project</p></a></li>
+                  <li class="action-list-item"><a href="#"><i class="fas fa-info"></i><p>Toggle description</p></a></li>
+                  <li class="action-list-item"><a href="#"><i class="fas fa-edit"></i><p>Edit project details</p></a></li>
+                  <li class="action-list-item"><a href="#"><i class="fas fa-check"></i><p>Complete project</p></a></li>
+                  <li class="action-list-item"><a href="#"><i class="far fa-trash-alt"></i><p>Delete project</p></a></li>
                 </ul>
               </div>
             </div>

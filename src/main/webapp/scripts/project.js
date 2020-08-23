@@ -58,9 +58,10 @@ function addUserToProject(projectId) {
   // Generate query string & use it t call the servlet
   const queryString = '/add-user-to-project?project=' + projectId +
   '&userEmail=' + userEmail + '&userRole=' + userRole;
-  fetch(queryString, {method: 'POST'}).then(response =>
-  response.json()).then((response) => {
-    if (response.hasOwnProperty('userId') && response.hasOwnProperty('userName')) {
+  fetch(queryString, {method: 'POST'}).then((response) =>
+    response.json()).then((response) => {
+    if (response.hasOwnProperty('userId') && 
+    response.hasOwnProperty('userName')) {
       addUserToProjectPage(response.userName, userRole, response.userId);
     }
 
@@ -70,7 +71,12 @@ function addUserToProject(projectId) {
   });
 }
 
-// Adds the user to the page so that a page reload isn't necessary
+/**
+ * Adds the user to the page so that a page reload isn't necessary
+ *@param {String} userName name of the user
+ *@param {String} userRole role of the user
+ *@param {String} userId id of user to generate link to their page
+ */
 function addUserToProjectPage(userName, userRole, userId) {
   const a = document.createElement('a');
   const p = document.createElement('p');
@@ -82,14 +88,14 @@ function addUserToProjectPage(userName, userRole, userId) {
 
 // get all tabs
 const tabs = document.querySelectorAll('.project-header-tab');
-tabs.forEach(clickedTab => {
+tabs.forEach((clickedTab) => {
   // add onClick event for each tab
   clickedTab.addEventListener('click', (e) => {
     // remove the active class from all tabs
     tabs.forEach((tab) => {
       tab.classList.remove('active');
     });
-    let clickedClassList = clickedTab.classList;
+    const clickedClassList = clickedTab.classList;
     // Add the active class on the clicked tab
     clickedClassList.add('active');
     if (clickedClassList.contains('tasks')) {
@@ -101,34 +107,46 @@ tabs.forEach(clickedTab => {
   });
 });
 
-// Displays the task section
+/**
+ * Displays the task section
+ */
 function showTaskSection() {
   hideUsersSection();
   taskSection.style.display = 'block';
 }
 
-// Hides the task section
+/**
+ * Hides the task section
+ */
 function hideTaskSection() {
   taskSection.style.display = 'none';
 }
 
-// Displays the users section
+/**
+ * Displays the users section
+ */
 function showUsersSection() {
   hideTaskSection();
   usersSection.style.display = 'block';
 }
 
-// Hides the users section
+/**
+ * Hides the users section
+ */
 function hideUsersSection() {
   usersSection.style.display = 'none';
 }
 
-// Displays user actions in header of project page
+/**
+ * Displays user actions in header of project page
+ */
 function showActions() {
   projectActions.style.display = 'block';
 }
 
-// Hides user actions
+/**
+ * Hides user actions
+ */
 function hideActions() {
   projectActions.style.display = 'none';
 }

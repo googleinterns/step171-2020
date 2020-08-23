@@ -426,7 +426,7 @@ ul {
   display: none;
 }
 
-.page-header-actions ul li a {
+.action-list-item a {
   padding: 10px;
   display: flex;
   font-size: 16px;
@@ -434,11 +434,11 @@ ul {
   align-items: center;
 }
 
-.page-header-actions ul li a i {
+.action-list-item i {
   padding-right: 10px;
 }
 
-.page-header-actions ul li:hover {
+.action-list-item:hover {
   background-color: lightgray;
 }
 
