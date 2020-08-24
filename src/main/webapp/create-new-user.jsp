@@ -12,7 +12,7 @@
 
   <body>
     <!-- Page content -->
-    <a href="/login">
+    <a href="/logout">
       <button>Return to login page</button>
     </a>
     <div id="content">

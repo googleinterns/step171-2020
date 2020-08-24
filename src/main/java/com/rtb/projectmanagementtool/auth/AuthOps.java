@@ -43,7 +43,10 @@ public class AuthOps {
   // only call after Auth
   public String getAuthID() {
     UserService userService = UserServiceFactory.getUserService();
-    return userService.getCurrentUser().getUserId();
+    if (userService.getCurrentUser() != null) {
+      return userService.getCurrentUser().getUserId();
+    }
+    return null;
   }
 
   public String getEmail() {

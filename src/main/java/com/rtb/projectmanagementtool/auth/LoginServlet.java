@@ -18,30 +18,25 @@ public class LoginServlet extends HttpServlet {
       throws ServletException, IOException {
     DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
     AuthOps auth = new AuthOps(datastore);
+    
+    String authID = auth.getAuthID();
+    if (authID != null) {
+      auth.loginUser(request, response);
+      UserController userController = new UserController(datastore);
+      UserData user = userController.getUserByAuthID(authID);
 
-    // Don't view login page if user is logged in
-    if (auth.whichUserIsLoggedIn(request, response) != AuthOps.NO_LOGGED_IN_USER) {
-      response.sendRedirect("/home");
-      return;
-    }
-
-    // if user successfully logged in but isn't in database, redirect to create user page
-    // 'do' param indicates that /login was called after a user a user logged in with Google
-    if (request.getParameterMap().containsKey("do")
-        && auth.loginUser(request, response) == AuthOps.NO_LOGGED_IN_USER) {
-      response.sendRedirect("/create-user");
-      return;
+      if (userController.getUserByAuthID(authID) == null) {
+        response.sendRedirect("/create-user");
+      } else {
+        response.sendRedirect("/home");
+      }
     }
 
     // Get login URL
-    request.setAttribute("loginUrl", auth.getLoginLink(/*Return URL*/ "/login?do"));
-
-    // Get login URL for first time users (on submit returns to LoginServlet)
-    request.setAttribute(
-        "loginUrlNewUser", auth.getLoginLink(/*Return URL*/ "/create-new-user.jsp"));
-    request.setAttribute("loginUrl", auth.getLoginLink(/*Return URL*/ "/login-dispatch"));
+    request.setAttribute("loginUrl", auth.getLoginLink(/*Return URL*/ "/login"));
 
     // Forward to login page
     request.getRequestDispatcher("login.jsp").forward(request, response);
+    return;
   }
 }
