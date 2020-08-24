@@ -8,18 +8,31 @@ const messageModal = document.getElementById('message-modal');
 const messageModalMessage = document.getElementById('message-modal-message');
 const taskSection = document.querySelector('.project-section.tasks');
 const usersSection = document.querySelector('.project-section.users');
+const projectActionsSelector = document.querySelector('.page-header-actions-selector');
 const projectActions = document.querySelector('.page-header-actions');
 const projectDescription = document.querySelector('.page-header-description');
+
+// Hides certain page elements that are clickable after opening a modal
+function hidePageElementsBeforeModal() {
+  projectActionsSelector.style.display = 'none';
+}
+
+// Shows certain page elements after closing a modal
+function showPageElementsAfterModal() {
+  projectActionsSelector.style.display = 'block';
+}
 
 // Hides the modal when clicked
 document.getElementById('modal-close').addEventListener('click',
     function() {
+      showPageElementsAfterModal();
       addUserModal.style.display = 'none';
     });
 
 // Opens the modal when clicked
 document.getElementById('add-user-button').addEventListener('click',
     function() {
+      hidePageElementsBeforeModal();
       document.getElementById('user-email').value = '';
       addUserModal.style.display = 'flex';
     });
@@ -29,6 +42,7 @@ document.getElementById('add-user-button').addEventListener('click',
  *@param {String} message the message to display
  */
 function showMessage(message) {
+  hidePageElementsBeforeModal();
   messageModalMessage.innerHTML = message;
   messageModal.style.display = 'flex';
 }
@@ -36,6 +50,7 @@ function showMessage(message) {
 // Closes the message modal
 document.getElementById('message-modal-close').addEventListener('click',
     function() {
+      showPageElementsAfterModal();
       messageModal.style.display = 'none';
     });
 
@@ -144,18 +159,19 @@ function hideUsersSection() {
  */
 function showActions() {
   if (projectActions.style.display === 'block') {
-      hideActions();
-      return;
+    hideActions();
+    return;
   }
   projectActions.style.display = 'block';
 }
 
 // Close the actions menu when page is clicked
-document.addEventListener('click', function(event){
-   if(!document.querySelector('.page-header-actions-selector').contains(event.target)) {
-      projectActions.style.display = 'none';
-   }
-   });
+document.addEventListener('click', function(event) {
+  if (!document.querySelector('.page-header-actions-selector')
+  .contains(event.target)) {
+    projectActions.style.display = 'none';
+  }
+});
 
 /**
  * Hides user actions
@@ -168,7 +184,7 @@ function hideActions() {
  * Toggles the state of the description text of a project to shown or hidden
  */
 function toggleDescription() {
-  if (projectDescription.style.display === 'none' || 
+  if (projectDescription.style.display === 'none' ||
   projectDescription.style.display === '') {
     projectDescription.style.display = 'block';
   } else {

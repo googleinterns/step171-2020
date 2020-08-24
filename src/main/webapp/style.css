@@ -330,9 +330,11 @@ ul {
   top: 0;
   right: 10px;
   position: absolute;
-  font-size: 20px;
-  font-weight: bold;
   cursor: pointer;
+}
+
+#modal-close i {
+  font-size: 20px;
 }
 
 /* Style Home Page */
@@ -387,15 +389,9 @@ ul {
 }
 
 .page-header-actions-selector {
-  top: -7px;
+  top: -8px;
   cursor: pointer;
   position: relative;
-}
-
-.page-header-actions-selector button {
-  border: none;
-  background: none;
-  outline: none;
 }
 
 #angle-down {

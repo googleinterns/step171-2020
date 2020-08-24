@@ -35,7 +35,7 @@
           <div class="page-header-title-and-actions">
             <h1><%=project.getName()%></h1>
             <div class="page-header-actions-selector" >
-              <button onclick="showActions()"><i id="angle-down" class="fas fa-angle-down"></i></button>
+              <a href="javascript:showActions();"><i id="angle-down" class="fas fa-angle-down"></i></a>
               <div class="page-header-actions">
                 <ul>
                   <li class="action-list-item"><a href="javascript:toggleDescription()"><i class="fas fa-info"></i><p>Toggle description</p></a></li>
