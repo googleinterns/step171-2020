@@ -18,7 +18,7 @@ public class LoginServlet extends HttpServlet {
       throws ServletException, IOException {
     DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
     AuthOps auth = new AuthOps(datastore);
-    
+
     String authID = auth.getAuthID();
     if (authID != null) {
       auth.loginUser(request, response);
