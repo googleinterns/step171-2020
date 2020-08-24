@@ -8,24 +8,29 @@ const messageModal = document.querySelector('.modal.message');
 const messageModalMessage = document.getElementById('message-modal-message');
 const taskSection = document.querySelector('.project-section.tasks');
 const usersSection = document.querySelector('.project-section.users');
-const projectActionsSelector = document.querySelector('.page-header-actions-selector');
+const projectActionsSelector = document.querySelector(
+    '.page-header-actions-selector');
 const projectActions = document.querySelector('.page-header-actions');
 const projectDescription = document.querySelector('.page-header-description');
-const editProjectDetailsModal = document.querySelector('.modal.edit-project-details');
-
+const editProjectDetailsModal = document.querySelector(
+    '.modal.edit-project-details');
 
 // Hides the modal when clicked
-document.querySelector('.modal-close.add-user-to-project').addEventListener('click',
-    function() {
+document.querySelector('.modal-close.add-user-to-project').addEventListener(
+'click',
+    () => {
       addUserModal.style.display = 'none';
-    });
+    }
+);
 
 // Opens the modal when clicked
-document.getElementById('add-user-button').addEventListener('click',
-    function() {
+document.getElementById('add-user-button').addEventListener(
+'click',
+    () => {
       document.getElementById('user-email').value = '';
       addUserModal.style.display = 'flex';
-    });
+    }
+);
 
 /**
  * Displays the message modal
@@ -37,10 +42,12 @@ function showMessage(message) {
 }
 
 // Closes the message modal
-document.getElementById('message-modal-close').addEventListener('click',
-    function() {
+document.getElementById('message-modal-close').addEventListener(
+'click',
+    () => {
       messageModal.style.display = 'none';
-    });
+    }
+);
 
 /**
  * Adds a user to the project; called from addUserModal
@@ -54,7 +61,8 @@ function addUserToProject(projectId) {
   if (userEmail === '') {
     addUserModal.style.display = 'none';
     showMessage('Invalid email');
-    return;
+
+return;
   }
 
   // Get user input for userRole
@@ -63,8 +71,8 @@ function addUserToProject(projectId) {
   // Generate query string & use it t call the servlet
   const queryString = '/add-user-to-project?project=' + projectId +
   '&userEmail=' + userEmail + '&userRole=' + userRole;
-  fetch(queryString, {method: 'POST'}).then((response) =>
-    response.json()).then((response) => {
+  fetch(queryString, {'method': 'POST'}).then((response) => response.json()).
+then((response) => {
     if (response.hasOwnProperty('userId') &&
     response.hasOwnProperty('userName')) {
       addUserToProjectPage(response.userName, userRole, response.userId);
@@ -91,12 +99,12 @@ function addUserToProjectPage(userName, userRole, userId) {
   usersSection.appendChild(a);
 }
 
-// get all tabs
+// Get all tabs
 const tabs = document.querySelectorAll('.project-header-tab');
 tabs.forEach((clickedTab) => {
-  // add onClick event for each tab
+  // Add onClick event for each tab
   clickedTab.addEventListener('click', (e) => {
-    // remove the active class from all tabs
+    // Remove the active class from all tabs
     tabs.forEach((tab) => {
       tab.classList.remove('active');
     });
@@ -148,15 +156,16 @@ function hideUsersSection() {
 function showActions() {
   if (projectActions.style.display === 'block') {
     hideActions();
-    return;
+
+return;
   }
   projectActions.style.display = 'block';
 }
 
 // Close the actions menu when page is clicked
-document.addEventListener('click', function(event) {
-  if (!document.querySelector('.page-header-actions-selector')
-  .contains(event.target)) {
+document.addEventListener('click', (event) => {
+  if (!document.querySelector('.page-header-actions-selector').
+      contains(event.target)) {
     projectActions.style.display = 'none';
   }
 });
@@ -183,17 +192,21 @@ function toggleDescription() {
 }
 
 // Hides the modal when clicked
-document.querySelector('.modal-close.edit-project-details').addEventListener('click',
-    function() {
+document.querySelector('.modal-close.edit-project-details').addEventListener(
+    'click',
+    () => {
       editProjectDetailsModal.style.display = 'none';
-    });
+    }
+);
 
-// Opens the modal when clicked
+/**
+ * Opens the modal when clicked
+ */
 function showEditProjectModal() {
   hideActions();
-  document.getElementById('project-name').value = 
+  document.getElementById('project-name').value =
   document.getElementById('main-project-name').innerHTML;
-  document.getElementById('project-desc').value = 
+  document.getElementById('project-desc').value =
   document.getElementById('main-project-description').innerHTML;
   editProjectDetailsModal.style.display = 'flex';
 }
@@ -217,14 +230,15 @@ function editProjectDetails(projectId) {
     } else if (projectDesc === '') {
       showMessage('Invalid description.');
     }
-    return;
+
+return;
   }
 
   // Generate query string & use it to call the servlet
   const queryString = '/edit-project-details?project=' + projectId +
   '&projectName=' + projectName + '&projectDesc=' + projectDesc;
-  fetch(queryString, {method: 'POST'}).then((response) =>
-    response.json()).then((response) => {
+  fetch(queryString, {'method': 'POST'}).then((response) => response.json()).
+then((response) => {
     if (response.message === 'Updated project name and description.') {
       updateProjectName(projectName);
       updateProjectDescription(projectDesc);
