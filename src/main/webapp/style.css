@@ -375,18 +375,26 @@ ul {
   align-items: center;
 }
 
-.page-header-title {
+.page-header-title-and-actions h1 {
   padding: 0 0 20px 10px;
-}
-
-.page-header-title h1 {
   margin-right: 20px;
   font-weight: bold;
 }
 
+.page-header-description {
+  padding: 0 0 20px 20px;
+  display: none;
+}
+
 .page-header-actions-selector {
+  top: -7px;
   cursor: pointer;
   position: relative;
+}
+
+.page-header-actions-selector button {
+  border: none;
+  background: none;
   outline: none;
 }
 

@@ -33,20 +33,21 @@
       <div class="project-page-top-bar">
         <div class="project-page-header">
           <div class="page-header-title-and-actions">
-            <div class="page-header-title">
-              <h1><%=project.getName()%></h1>
-            </div>
-            <div class="page-header-actions-selector" tabindex="100" onfocus="showActions()" onblur="hideActions()">
-              <i id="angle-down" class="fas fa-angle-down"></i>
+            <h1><%=project.getName()%></h1>
+            <div class="page-header-actions-selector" >
+              <button onclick="showActions()"><i id="angle-down" class="fas fa-angle-down"></i></button>
               <div class="page-header-actions">
                 <ul>
-                  <li class="action-list-item"><a href="#"><i class="fas fa-info"></i><p>Toggle description</p></a></li>
+                  <li class="action-list-item"><a href="javascript:toggleDescription()"><i class="fas fa-info"></i><p>Toggle description</p></a></li>
                   <li class="action-list-item"><a href="#"><i class="fas fa-edit"></i><p>Edit project details</p></a></li>
                   <li class="action-list-item"><a href="#"><i class="fas fa-check"></i><p>Complete project</p></a></li>
                   <li class="action-list-item"><a href="#"><i class="far fa-trash-alt"></i><p>Delete project</p></a></li>
                 </ul>
               </div>
             </div>
+          </div>
+          <div class="page-header-description">
+            <p><%=project.getDescription()%></p>
           </div>
           <div class="page-header-nav">
             <div class="project-header-tab tasks active">

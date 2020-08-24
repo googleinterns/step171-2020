@@ -27,7 +27,8 @@ public class LoginServlet extends HttpServlet {
 
     // if user successfully logged in but isn't in database, redirect to create user page
     // 'do' param indicates that /login was called after a user a user logged in with Google
-    if (auth.loginUser(request, response) == AuthOps.NO_LOGGED_IN_USER) {
+    if (request.getParameterMap().containsKey("do")
+        && auth.loginUser(request, response) == AuthOps.NO_LOGGED_IN_USER) {
       response.sendRedirect("/create-user");
       return;
     }

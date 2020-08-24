@@ -9,6 +9,8 @@ const messageModalMessage = document.getElementById('message-modal-message');
 const taskSection = document.querySelector('.project-section.tasks');
 const usersSection = document.querySelector('.project-section.users');
 const projectActions = document.querySelector('.page-header-actions');
+const projectDescription = document.querySelector('.page-header-description');
+
 // Hides the modal when clicked
 document.getElementById('modal-close').addEventListener('click',
     function() {
@@ -141,12 +143,36 @@ function hideUsersSection() {
  * Displays user actions in header of project page
  */
 function showActions() {
+  if (projectActions.style.display === 'block') {
+      hideActions();
+      return;
+  }
   projectActions.style.display = 'block';
 }
+
+// Close the actions menu when page is clicked
+document.addEventListener('click', function(event){
+   if(!document.querySelector('.page-header-actions-selector').contains(event.target)) {
+      projectActions.style.display = 'none';
+   }
+   });
 
 /**
  * Hides user actions
  */
 function hideActions() {
   projectActions.style.display = 'none';
+}
+
+/**
+ * Toggles the state of the description text of a project to shown or hidden
+ */
+function toggleDescription() {
+  if (projectDescription.style.display === 'none' || 
+  projectDescription.style.display === '') {
+    projectDescription.style.display = 'block';
+  } else {
+    projectDescription.style.display = 'none';
+  }
+  hideActions();
 }
