@@ -28,26 +28,31 @@
     <!-- Include modals -->
     <jsp:include page="add-user-to-project-modal.jsp" />
     <jsp:include page="message-modal.jsp" />
+    <jsp:include page="edit-project-details-modal.jsp" />
 
     <div class="content">
       <div class="project-page-top-bar">
         <div class="project-page-header">
           <div class="page-header-title-and-actions">
-            <h1><%=project.getName()%></h1>
+            <h1 id="main-project-name"><%=project.getName()%></h1>
             <div class="page-header-actions-selector" >
               <a href="javascript:showActions();"><i id="angle-down" class="fas fa-angle-down"></i></a>
               <div class="page-header-actions">
                 <ul>
                   <li class="action-list-item"><a href="javascript:toggleDescription()"><i class="fas fa-info"></i><p>Toggle description</p></a></li>
-                  <li class="action-list-item"><a href="#"><i class="fas fa-edit"></i><p>Edit project details</p></a></li>
+                  <% if (project.isCreator(userId) || project.hasAdmin(userId)) { %>
+                  <li class="action-list-item"><a href="javascript:showEditProjectModal()"><i class="fas fa-edit"></i><p>Edit project details</p></a></li>
+                  <% } %>
+                  <% if (project.isCreator(userId)) { %>
                   <li class="action-list-item"><a href="#"><i class="fas fa-check"></i><p>Complete project</p></a></li>
                   <li class="action-list-item"><a href="#"><i class="far fa-trash-alt"></i><p>Delete project</p></a></li>
+                  <% } %>
                 </ul>
               </div>
             </div>
           </div>
           <div class="page-header-description">
-            <p><%=project.getDescription()%></p>
+            <p id="main-project-description"><%=project.getDescription()%></p>
           </div>
           <div class="page-header-nav">
             <div class="project-header-tab tasks active">

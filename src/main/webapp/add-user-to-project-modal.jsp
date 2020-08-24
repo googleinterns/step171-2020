@@ -5,9 +5,9 @@
     ProjectData project = (ProjectData) request.getAttribute("project");
 %>
 
-<div id="add-user-to-project-modal">
+<div class="modal add-user-to-project">
   <div class="modal-content">
-    <div id="modal-close"><i class="fas fa-times"></i></div>
+    <div class="modal-close add-user-to-project"><i class="fas fa-times"></i></div>
       <h3>Add user to project</h3>
       <input type="hidden" name="projectId" value=<%=project.getId()%>>
       <div>
