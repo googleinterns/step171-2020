@@ -11,8 +11,8 @@
       <h3>Add user to project</h3>
       <input type="hidden" name="projectId" value=<%=project.getId()%>>
       <div>
-        <label>Invite Code</label>
-        <input title="Enter the user's invite code" type="text" id="user-invite-code" name="user-invite-cide" placeholder="User invite code" /> 
+        <label>Email</label>
+        <input title="Enter the user's email" type="text" id="user-email" name="user-email" placeholder="User email" /> 
       </div>
       <div>
         <label>Role</label>

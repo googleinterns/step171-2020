@@ -75,7 +75,7 @@ document.querySelector('.modal-close.add-user-to-project').addEventListener(
 document.getElementById('add-user-button').addEventListener(
     'click',
     () => {
-      document.getElementById('user-invite-code').value = '';
+      document.getElementById('user-email').value = '';
       addUserModal.style.display = 'flex';
     },
 );
@@ -88,12 +88,12 @@ document.getElementById('add-user-button').addEventListener(
  */
 function addUserToProject(projectId) {
   // Get user input for userName
-  const userInviteCode = document.getElementById('user-invite-code').value;
+  const userEmail = document.getElementById('user-email').value;
 
   // If userInviteCode is empty, show error message
-  if (userInviteCode === '') {
+  if (userEmail === '') {
     addUserModal.style.display = 'none';
-    showMessage('Invalid invite code.');
+    showMessage('Invalid email.');
     return;
   }
 
@@ -102,7 +102,7 @@ function addUserToProject(projectId) {
 
   // Generate query string & use it t call the servlet
   const queryString = '/add-user-to-project?project=' + projectId +
-  '&userInviteCode=' + userInviteCode + '&userRole=' + userRole;
+  '&userEmail=' + userEmail + '&userRole=' + userRole;
   fetch(queryString, {'method': 'POST'}).then((response) => response.json()).
       then((response) => {
         if (response.hasOwnProperty('userId') &&
@@ -147,6 +147,15 @@ document.getElementById('message-modal-close').addEventListener(
       messageModal.style.display = 'none';
     },
 );
+
+/**
+ * Delete the project
+ */
+function deleteProject(projectId) {
+  const queryString = '/delete-project?project=' + projectId;
+  fetch(queryString, {'method': 'POST'});
+  location.href = "/home";
+}
 
 /**
  * Add event listener to toggle tree.

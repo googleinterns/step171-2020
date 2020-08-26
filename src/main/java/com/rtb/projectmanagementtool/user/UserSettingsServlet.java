@@ -130,6 +130,7 @@ public class UserSettingsServlet extends HttpServlet {
     user.setUserYear(userYear);
     user.setUserMajors(userMajors);
     user.setUserSkills(skills);
+    user.setEmail();
 
     // update in datastore
     userController.updateUser(user);

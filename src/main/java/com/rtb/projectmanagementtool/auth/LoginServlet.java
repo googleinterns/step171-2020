@@ -24,8 +24,7 @@ public class LoginServlet extends HttpServlet {
       UserController userController = new UserController(datastore);
       UserData user = userController.getUserByAuthID(authID);
 
-      if (userController.getUserByAuthID(authID)
-          == null) { // If user doesn't exist, redirect to /create-user
+      if (user == null) { // If user doesn't exist, redirect to /create-user
         response.sendRedirect("/create-user");
       } else { // If user exists, redirect to /home
         response.sendRedirect("/home");

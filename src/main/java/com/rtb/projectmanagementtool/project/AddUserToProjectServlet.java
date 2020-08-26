@@ -4,6 +4,7 @@ package com.rtb.projectmanagementtool.project;
 import com.google.appengine.api.datastore.*;
 import com.rtb.projectmanagementtool.user.*;
 import java.io.IOException;
+import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -24,12 +25,22 @@ public class AddUserToProjectServlet extends HttpServlet {
 
     // get request parameters
     Long projectId = Long.parseLong(request.getParameter("project"));
-    String userInviteCode = request.getParameter("userInviteCode");
+    String userEmail = request.getParameter("userEmail");
     String userRole = request.getParameter("userRole");
 
     // create objects
     ProjectData project = projectController.getProjectById(projectId);
-    UserData user = userController.getUserByInviteCode(userInviteCode);
+
+    // need to call getEveryUser and iterate through the list to find user b/c email field is not
+    // added to database
+    ArrayList<UserData> users = userController.getEveryUser();
+    UserData user = null;
+    for (UserData _user : users) {
+      if (_user.getEmail().equals(userEmail)) {
+        user = _user;
+        break;
+      }
+    }
 
     // if user is not in database or they are already in the project,
     // redirect back to project page

@@ -38,7 +38,7 @@ public class ProjectServlet extends HttpServlet {
     ProjectData project = projectController.getProjectById(projectId);
 
     // If the user is not a part of the project, redirect to home page
-    if (!project.hasUser(userLoggedInId)) {
+    if (project == null || !project.hasUser(userLoggedInId)) {
       response.sendRedirect("/home");
       return;
     }

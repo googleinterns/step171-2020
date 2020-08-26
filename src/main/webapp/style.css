@@ -597,6 +597,10 @@ textarea:focus {
   font-size: 20px;
 }
 
+#user-email {
+  width: auto;
+}
+
 /* NAVIGATION BAR */
 
 #navigation ul {
