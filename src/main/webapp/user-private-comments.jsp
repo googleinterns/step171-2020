@@ -21,13 +21,13 @@
     <%if (currUser) {%>
       <h1 id="pc-header">Your Private Task Comments:</h1>
       <%for (TaskData task : tasks) {%>
-        
+        var jsData = <%=var jsData = (privateCommentsMap.get(task.getTaskID())).getMessage().trim()%>;
         <script>
           function init() {
             const editor = new EditorJS({
             holderId : 'box',
             autofocus: true,
-            data: '<%=(privateCommentsMap.get(task.getTaskID())).getMessage().trim()%>',
+            data: jsData,
             tools: {
               header: Header,
              },
@@ -53,7 +53,7 @@
           <form onload="init()" action="/user-profile" method="POST">
             <input type="hidden" name="taskID" value="<%=task.getTaskID()%>">
             <br>
-            <div id='box' style="width:300px; height:100px;" type="text" name="message-<%=task.getTaskID()%>"></div>
+            <div id='box' type="text" name="message-<%=task.getTaskID()%>"></div>
             <br>
             <button onlclick="save()" class="deep-button submit-button" type="submit" class="deep-button">Update Comment</button>
           </form>

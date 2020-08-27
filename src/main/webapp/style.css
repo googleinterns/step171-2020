@@ -378,12 +378,12 @@ textarea:focus {
 }
 
 .submit-button {
- font-size: 12px;
+  font-size: 12px;
 }
 
 #box {
-  width:300px;
-  height:100px
+  width: 300px;
+  height: 100px;
 }
 
 .deep-button:hover {
