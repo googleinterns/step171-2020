@@ -150,11 +150,12 @@ document.getElementById('message-modal-close').addEventListener(
 
 /**
  * Delete the project
+ *@param {String} projectId the id of the project
  */
 function deleteProject(projectId) {
   const queryString = '/delete-project?project=' + projectId;
   fetch(queryString, {'method': 'POST'});
-  location.href = "/home";
+  location.href = '/home';
 }
 
 /**

@@ -188,6 +188,15 @@ public final class TaskController {
     return task;
   }
 
+  public ArrayList<TaskData> getTasksByIDs(ArrayList<Long> taskIDs) {
+    ArrayList<Key> keys = getKeysFromTaskIDs(taskIDs);
+    if (keys.isEmpty()) {
+      return new ArrayList<>();
+    }
+    Filter filter = new FilterPredicate("__key__", FilterOperator.IN, keys);
+    return getTasks(filter, NO_QUERY_LIMIT, NO_QUERY_SORT);
+  }
+
   public ArrayList<TaskData> getTasksByUserID(long userID) {
     Filter filter = new FilterPredicate("users", FilterOperator.EQUAL, userID);
     return getTasks(filter, NO_QUERY_LIMIT, NO_QUERY_SORT);
@@ -285,7 +294,22 @@ public final class TaskController {
     return tasks;
   }
 
+  public boolean isSubtask(long parentTaskID, long subtaskID) {
+    return isSubtask(getTaskByID(parentTaskID), subtaskID);
+  }
+
+  private boolean isSubtask(TaskData parentTask, long subtaskID) {
+    ArrayList<TaskData> subtasks = getSubtasks(parentTask);
+    for (TaskData subtask : subtasks) {
+      if (subtask.getTaskID() == subtaskID || isSubtask(subtask, subtaskID) == true) {
+        return true;
+      }
+    }
+    return false;
+  }
+
   // Delete methods
+
   public void deleteTasks(ArrayList<Long> taskIDs) {
     TransactionOptions options = TransactionOptions.Builder.withXG(true);
     Transaction transaction = datastore.beginTransaction(options);
