@@ -20,7 +20,8 @@
   </head>
   <script>
     function init(privateCommentID, jsData) {
-      const editor = new EditorJS({
+        console.log("here!");
+        const editor = new EditorJS({
         holderId : privateCommentID,
         autofocus: true,
         data: jsData,
@@ -28,6 +29,7 @@
           header: Header,
         },
       });
+      console.log("here 2 !");
     }
     function save() {
       editor.save().then((outputData) => {
