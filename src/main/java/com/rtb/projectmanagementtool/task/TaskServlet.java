@@ -1,6 +1,9 @@
 package com.rtb.projectmanagementtool.task;
 
 import com.google.appengine.api.datastore.*;
+import com.google.appengine.api.memcache.ErrorHandlers;
+import com.google.appengine.api.memcache.MemcacheService;
+import com.google.appengine.api.memcache.MemcacheServiceFactory;
 import com.rtb.projectmanagementtool.auth.*;
 import com.rtb.projectmanagementtool.comment.*;
 import com.rtb.projectmanagementtool.project.*;
@@ -10,6 +13,7 @@ import com.rtb.projectmanagementtool.user.*;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.logging.Level;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -71,10 +75,12 @@ public class TaskServlet extends HttpServlet {
     boolean canSetComplete = taskController.allSubtasksAreComplete(task);
     boolean canSetIncomplete = !taskController.parentTaskIsComplete(task);
 
-    // Get Task Blocker status
+    // Get Blockers for task
+    MemcacheService cache = MemcacheServiceFactory.getMemcacheService();
+    cache.setErrorHandler(ErrorHandlers.getConsistentLogAndContinue(Level.INFO));
     TaskBlockerController taskBlockerController =
-        new TaskBlockerController(datastore, taskController);
-    ArrayList<TaskData> blockers = taskBlockerController.getTaskBlockerTasks(taskID);
+        new TaskBlockerController(datastore, cache, taskController);
+    ArrayList<TaskData> blockers = taskBlockerController.getBlockersForTask(taskID);
 
     // Get Parent Project
     ProjectController projectController = new ProjectController(datastore);
@@ -107,7 +113,8 @@ public class TaskServlet extends HttpServlet {
     CommentController commentController = new CommentController(datastore);
     ArrayList<CommentData> comments = new ArrayList<>();
     try {
-      comments = commentController.getComments(taskID, limit, sortBy, sortDirection);
+      // comments = commentController.getComments(taskID, limit, sortBy, sortDirection);
+      comments = commentController.getCommentsByTaskID(taskID);
     } catch (NullPointerException | IllegalArgumentException e) {
       System.out.println("TaskID doesn't exist. Cannot fetch comments.");
     }
