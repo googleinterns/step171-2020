@@ -53,8 +53,11 @@
             <form action="/user-profile" method="POST">
               <input type="hidden" name="taskID" value="<%=task.getTaskID()%>"> 
               <br>
-              <div id="box-<%=task.getTaskID()%>" onload="init('box-<%=task.getTaskID()%>', '<%=(privateCommentsMap.get(task.getTaskID())).getMessage().trim()%>')" type="text"></div>
-              <br>
+              <%
+                PrivateCommentData pc = (PrivateCommentData) (privateCommentsMap.get(task.getTaskID()));
+                String message = (String) pc.getMessage().trim();
+              %>
+              <div id="box-<%=task.getTaskID()%>" onload="init('box-<%=task.getTaskID()%>', '<%=message%>')" type="text"></div>
               <input type="hidden" name="message-<%=task.getTaskID()%>" value="document.getElementById('box-<%=task.getTaskID()%>').value(outputData);"</input>
               <button onclick="save()" class="deep-button submit-button" type="submit" class="deep-button">Update Comment</button>
             </form>
