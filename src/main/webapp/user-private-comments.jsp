@@ -19,12 +19,13 @@
     <script src="https://cdn.jsdelivr.net/npm/@editorjs/header@latest"></script>
   </head>
   <script>
-    function init(privateCommentID, jsData) {
+    var privateCommentsDataJSON = <%=new Gson().toJson(privateCommentsMap)%>;
+    function init(privateCommentID) {
         console.log("here!");
         const editor = new EditorJS({
-        holderId : privateCommentID,
+        holderId : "box-" + privateCommentID,
         autofocus: true,
-        data: jsData,
+        data: privateCommentsDataJson[privateCommentID],
         tools: {
           header: Header,
         },
@@ -56,11 +57,10 @@
               <input type="hidden" name="taskID" value="<%=task.getTaskID()%>"> 
               <br>
               <%
-                PrivateCommentData pc = (PrivateCommentData) (privateCommentsMap.get(task.getTaskID()));
-                String message = (String) pc.getMessage().trim();
+                String ID = (String) "box-" + task.getTaskID();
               %>
-              <div id="box-<%=task.getTaskID()%>" onload="init('box-<%=task.getTaskID()%>', '<%=message%>')" type="text"></div>
-              <input type="hidden" name="message-<%=task.getTaskID()%>" value="document.getElementById('box-<%=task.getTaskID()%>').value(outputData);"</input>
+              <div id="box-<%=task.getTaskID()%>" onload="init('<%=ID%>')" type="text"></div>
+              <input type="hidden" name="message-<%=task.getTaskID()%>" value="document.getElementById('<%=ID%>').value(outputData);"</input>
               <button onclick="save()" class="deep-button submit-button" type="submit" class="deep-button">Update Comment</button>
             </form>
             <br><br>
