@@ -20,6 +20,8 @@
     <meta charset="UTF-8">
     <title><%=user.getUserName()%></title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/header@latest"></script>
   </head>
 
   <body>
