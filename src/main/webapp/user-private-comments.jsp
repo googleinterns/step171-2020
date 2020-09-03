@@ -20,19 +20,19 @@
   </head>
   <script>
     var privateCommentsDataJSON = <%=new Gson().toJson(privateCommentsMap)%>;
-    function init(privateCommentID) {
+    function init(privateCommentTaskID) {
         console.log("here!");
         const editor = new EditorJS({
-        holderId : "box-" + privateCommentID,
+        holderId : "box-" + privateCommentTaskID,
         autofocus: true,
-        data: privateCommentsDataJson[privateCommentID],
+        data: privateCommentsDataJson[privateCommentTaskID],
         tools: {
           header: Header,
         },
       });
-      console.log("here 2 !");
+      return editor;
     }
-    function save() {
+    function save(editor) {
       editor.save().then((outputData) => {
         console.log('Article data: ', outputData)
       }).catch((error) => {
@@ -56,12 +56,9 @@
             <form action="/user-profile" method="POST">
               <input type="hidden" name="taskID" value="<%=task.getTaskID()%>"> 
               <br>
-              <%
-                String ID = (String) "box-" + task.getTaskID();
-              %>
-              <div id="box-<%=task.getTaskID()%>" onload="init('<%=ID%>')" type="text"></div>
-              <input type="hidden" name="message-<%=task.getTaskID()%>" value="document.getElementById('<%=ID%>').value(outputData);"</input>
-              <button onclick="save()" class="deep-button submit-button" type="submit" class="deep-button">Update Comment</button>
+              <div id="box-<%=task.getTaskID()%>" onload="init(<%=task.getTaskID()%>)" type="text">Here</div>
+              <button onclick="save(init(<%=task.getTaskID()%>))" class="deep-button submit-button" type="submit" class="deep-button">Update Comment</button>
+              <input type="hidden" name="message-<%=task.getTaskID()%>" value="save()"</input>
             </form>
             <br><br>
           </li>
